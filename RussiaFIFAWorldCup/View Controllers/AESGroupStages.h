@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AESGroupStages.h
 //  RussiaFIFAWorldCup
 //
 //  Created by Aobakwe Segone on 2018/07/09.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AESGroupStages : UITableViewController
 
 @end
-

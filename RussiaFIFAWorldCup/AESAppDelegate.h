@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AESAppDelegate.h
 //  RussiaFIFAWorldCup
 //
 //  Created by Aobakwe Segone on 2018/07/09.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AESAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) UIWindow *window;
 
 @end
-
