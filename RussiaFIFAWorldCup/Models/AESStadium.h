@@ -14,8 +14,6 @@
 @property (nonatomic, readonly) int stadiumID;
 @property (nonatomic, strong, readonly) NSString *stadiumName;
 @property (nonatomic, strong, readonly) NSString *stadiumCity;
-@property (nonatomic, readonly) float lat;
-@property (nonatomic, readonly) float lng;
 @property (nonatomic, strong, readonly) UIImage *stadiumImage;
 
 #pragma mark - initializer

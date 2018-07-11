@@ -13,7 +13,7 @@
 #pragma mark - initialization chain
 
 - (instancetype)initWithKnockoutName:(NSString *)name matches:(NSArray *)matches{
-    self = [super initWithKnockOutRound:nil];
+    self = [super init];
     
     if (self) {
         _knockoutName = name;
@@ -23,16 +23,8 @@
     return self;
 }
 
-- (instancetype)initWithKnockOutRound:(NSDictionary *)knockOutRound{
-    
-    return [self initWithKnockoutName:nil matches:nil];
-
-}
-
 - (instancetype)init{
-    @throw [NSException exceptionWithName:@"Incorrect Initializer" reason:@"Use initWithKnockoutName:matches:" userInfo:nil];
-    
-    return nil;
+    return [self initWithKnockoutName:nil matches:nil];
 }
 
 @end

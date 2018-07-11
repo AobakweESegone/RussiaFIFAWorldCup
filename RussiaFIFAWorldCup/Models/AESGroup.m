@@ -11,17 +11,11 @@
 @implementation AESGroup
 
 - (instancetype)init{
-    @throw [NSException exceptionWithName:@"Incorrect Initialzer" reason:@"Use initWithGroupName:winner:runnerUp:andGroupMatches:" userInfo:nil];
-    
-    return nil;
-}
-
-- (instancetype)initWithTournamentGroups:(NSDictionary *)groups{
     return [self initWithGroupName:nil winner:nil runnerUp:nil andGroupMatches:nil];
 }
 
 - (instancetype)initWithGroupName:(NSString *)name winner:(NSString *)winner runnerUp:(NSString *)runnerUp andGroupMatches:(NSArray *)matches{
-    self = [super initWithTournamentGroups:nil];
+    self = [super init];
     
     if (self) {
         _name = name;

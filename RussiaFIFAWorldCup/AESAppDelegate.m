@@ -11,7 +11,11 @@
 @implementation AESAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // fetch data
+    AESWorldCupStore *sharedStore = [AESWorldCupStore sharedStore];
+    [sharedStore fetchWorldCupData];
+    
     return YES;
 }
 

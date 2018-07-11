@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AESWorldCupStore.h"
+
 @interface AESAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;

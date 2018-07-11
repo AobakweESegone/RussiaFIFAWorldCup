@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		E29E589220F5C1970031DA33 /* AESStadium.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589120F5C1970031DA33 /* AESStadium.m */; };
 		E29E589520F5C55D0031DA33 /* AESParticipatingTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589420F5C55D0031DA33 /* AESParticipatingTeam.m */; };
-		E29E589820F5C70B0031DA33 /* AESGroupStage.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589720F5C70B0031DA33 /* AESGroupStage.m */; };
 		E29E589B20F5C8070031DA33 /* AESGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589A20F5C8070031DA33 /* AESGroup.m */; };
 		E29E589E20F5C98B0031DA33 /* AESGroupMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589D20F5C98A0031DA33 /* AESGroupMatch.m */; };
-		E29E58A120F5CCEA0031DA33 /* AESKnockOutStage.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A020F5CCEA0031DA33 /* AESKnockOutStage.m */; };
 		E29E58A420F5CE360031DA33 /* AESKnockOut.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A320F5CE360031DA33 /* AESKnockOut.m */; };
 		E29E58A720F5CF480031DA33 /* AESKnockoutMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */; };
+		E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */; };
+		E2B5DBD020F6963E002C9924 /* AESGroupsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */; };
 		E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADC20F3DA790087BA04 /* Assets.xcassets */; };
 		E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */; };
 		E2FFFAE320F3DA790087BA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAE220F3DA790087BA04 /* main.m */; };
@@ -31,18 +31,17 @@
 		E29E589120F5C1970031DA33 /* AESStadium.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESStadium.m; sourceTree = "<group>"; };
 		E29E589320F5C55D0031DA33 /* AESParticipatingTeam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESParticipatingTeam.h; sourceTree = "<group>"; };
 		E29E589420F5C55D0031DA33 /* AESParticipatingTeam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESParticipatingTeam.m; sourceTree = "<group>"; };
-		E29E589620F5C70B0031DA33 /* AESGroupStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESGroupStage.h; sourceTree = "<group>"; };
-		E29E589720F5C70B0031DA33 /* AESGroupStage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESGroupStage.m; sourceTree = "<group>"; };
 		E29E589920F5C8070031DA33 /* AESGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESGroup.h; sourceTree = "<group>"; };
 		E29E589A20F5C8070031DA33 /* AESGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESGroup.m; sourceTree = "<group>"; };
 		E29E589C20F5C98A0031DA33 /* AESGroupMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESGroupMatch.h; sourceTree = "<group>"; };
 		E29E589D20F5C98A0031DA33 /* AESGroupMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESGroupMatch.m; sourceTree = "<group>"; };
-		E29E589F20F5CCEA0031DA33 /* AESKnockOutStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockOutStage.h; sourceTree = "<group>"; };
-		E29E58A020F5CCEA0031DA33 /* AESKnockOutStage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockOutStage.m; sourceTree = "<group>"; };
 		E29E58A220F5CE360031DA33 /* AESKnockOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockOut.h; sourceTree = "<group>"; };
 		E29E58A320F5CE360031DA33 /* AESKnockOut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockOut.m; sourceTree = "<group>"; };
 		E29E58A520F5CF480031DA33 /* AESKnockoutMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutMatch.h; sourceTree = "<group>"; };
 		E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockoutMatch.m; sourceTree = "<group>"; };
+		E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AESGroupsTableViewCell.xib; sourceTree = "<group>"; };
+		E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESGroupsTableViewCell.m; sourceTree = "<group>"; };
+		E2B5DBCE20F6963E002C9924 /* AESGroupsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESGroupsTableViewCell.h; sourceTree = "<group>"; };
 		E2FFFAD020F3DA710087BA04 /* RussiaFIFAWorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaFIFAWorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFFADC20F3DA790087BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FFFADF20F3DA790087BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2B5DBC620F694EE002C9924 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2B5DBCE20F6963E002C9924 /* AESGroupsTableViewCell.h */,
+				E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */,
+				E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E2FFFAC720F3DA700087BA04 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +99,9 @@
 		E2FFFAD220F3DA710087BA04 /* RussiaFIFAWorldCup */ = {
 			isa = PBXGroup;
 			children = (
+				E2B5DBC620F694EE002C9924 /* Views */,
+				E2FFFAED20F3DB700087BA04 /* AESAppDelegate.h */,
+				E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */,
 				E2FFFAFB20F3E36A0087BA04 /* Models */,
 				E2FFFAE920F3DB0B0087BA04 /* View Controllers */,
 				E2FFFADC20F3DA790087BA04 /* Assets.xcassets */,
@@ -97,8 +109,6 @@
 				E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */,
 				E2FFFAE120F3DA790087BA04 /* Info.plist */,
 				E2FFFAE220F3DA790087BA04 /* main.m */,
-				E2FFFAED20F3DB700087BA04 /* AESAppDelegate.h */,
-				E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */,
 				E2FFFAF020F3DBE30087BA04 /* AESStoryBoard.storyboard */,
 			);
 			path = RussiaFIFAWorldCup;
@@ -124,14 +134,10 @@
 				E29E589120F5C1970031DA33 /* AESStadium.m */,
 				E29E589320F5C55D0031DA33 /* AESParticipatingTeam.h */,
 				E29E589420F5C55D0031DA33 /* AESParticipatingTeam.m */,
-				E29E589620F5C70B0031DA33 /* AESGroupStage.h */,
-				E29E589720F5C70B0031DA33 /* AESGroupStage.m */,
 				E29E589920F5C8070031DA33 /* AESGroup.h */,
 				E29E589A20F5C8070031DA33 /* AESGroup.m */,
 				E29E589C20F5C98A0031DA33 /* AESGroupMatch.h */,
 				E29E589D20F5C98A0031DA33 /* AESGroupMatch.m */,
-				E29E589F20F5CCEA0031DA33 /* AESKnockOutStage.h */,
-				E29E58A020F5CCEA0031DA33 /* AESKnockOutStage.m */,
 				E29E58A220F5CE360031DA33 /* AESKnockOut.h */,
 				E29E58A320F5CE360031DA33 /* AESKnockOut.m */,
 				E29E58A520F5CF480031DA33 /* AESKnockoutMatch.h */,
@@ -201,6 +207,7 @@
 				E2FFFAF620F3DE790087BA04 /* cell_image_selected_blue.png in Resources */,
 				E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */,
 				E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */,
+				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
 				E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,11 +223,10 @@
 				E29E589E20F5C98B0031DA33 /* AESGroupMatch.m in Sources */,
 				E29E589220F5C1970031DA33 /* AESStadium.m in Sources */,
 				E2FFFAFE20F3E3860087BA04 /* AESWorldCupStore.m in Sources */,
-				E29E58A120F5CCEA0031DA33 /* AESKnockOutStage.m in Sources */,
 				E2FFFAEC20F3DB4B0087BA04 /* AESGroupStages.m in Sources */,
-				E29E589820F5C70B0031DA33 /* AESGroupStage.m in Sources */,
 				E29E58A420F5CE360031DA33 /* AESKnockOut.m in Sources */,
 				E29E58A720F5CF480031DA33 /* AESKnockoutMatch.m in Sources */,
+				E2B5DBD020F6963E002C9924 /* AESGroupsTableViewCell.m in Sources */,
 				E2FFFAEF20F3DB700087BA04 /* AESAppDelegate.m in Sources */,
 				E29E589520F5C55D0031DA33 /* AESParticipatingTeam.m in Sources */,
 				E2FFFAE320F3DA790087BA04 /* main.m in Sources */,

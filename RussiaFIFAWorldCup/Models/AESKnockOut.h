@@ -6,9 +6,9 @@
 //  Copyright © 2018 aobakwesegone. All rights reserved.
 //
 
-#import "AESKnockOutStage.h"
+#import <Foundation/Foundation.h>
 
-@interface AESKnockOut : AESKnockOutStage
+@interface AESKnockOut : NSObject
 
 @property (nonatomic, strong, readonly) NSString *knockoutName;
 @property (nonatomic, strong, readonly) NSArray *matches;

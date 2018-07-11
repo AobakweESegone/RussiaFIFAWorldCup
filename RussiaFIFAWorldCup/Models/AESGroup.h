@@ -6,9 +6,9 @@
 //  Copyright © 2018 aobakwesegone. All rights reserved.
 //
 
-#import "AESGroupStage.h"
+#import <Foundation/Foundation.h>
 
-@interface AESGroup : AESGroupStage
+@interface AESGroup : NSObject
 
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSString *winner;
