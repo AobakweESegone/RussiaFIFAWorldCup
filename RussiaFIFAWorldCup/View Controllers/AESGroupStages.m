@@ -19,6 +19,17 @@
     AESWorldCupStore *sharedStore;
 }
 
+#pragma mark - initializers
+
+- (instancetype)initWithStyle:(UITableViewStyle)style{
+    
+    if (self =  [super initWithStyle:style]) {
+    }
+    return self;
+}
+
+#pragma mark - view life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -26,6 +37,16 @@
     
     UINib *nib = [UINib nibWithNibName:@"AESGroupsTableViewCell" bundle:nil]; // nil forces the compiler to look in the main bundle
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AESGroupsTableViewCell"];
+    
+    /*
+     
+     COMMEMNT OUT FOR NETWORK CALL
+     
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"Tournament Groups Generated" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        // upon call return, reload table data
+        [self.tableView reloadData];
+    }];
+     */
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

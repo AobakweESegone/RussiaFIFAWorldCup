@@ -117,6 +117,8 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
          dispatch_async(dispatch_get_main_queue(), ^{
              // run groups on the main thread
              [self generateTournamentGroups];
+             // inform observer that the call has returned
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"Tournament Groups Generated" object:nil userInfo:nil];
          });
      
      }];
