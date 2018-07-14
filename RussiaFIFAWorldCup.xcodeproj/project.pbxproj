@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		E27F898820FA36B20046C717 /* AESGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27F898620FA36B20046C717 /* AESGroupDetailViewController.m */; };
 		E27F898920FA36B20046C717 /* AESGroupDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F898720FA36B20046C717 /* AESGroupDetailViewController.xib */; };
-		E27F898B20FA3E9A0046C717 /* russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png in Resources */ = {isa = PBXBuildFile; fileRef = E27F898A20FA3E990046C717 /* russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png */; };
 		E27F898F20FA42BA0046C717 /* AESGroupDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E27F898D20FA42BA0046C717 /* AESGroupDetailTableViewCell.m */; };
 		E27F899020FA42BA0046C717 /* AESGroupDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F898E20FA42BA0046C717 /* AESGroupDetailTableViewCell.xib */; };
+		E296FF9B20FA64F200A0878D /* cell_image_selected_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */; };
+		E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */; };
+		E296FFA320FAA00F00A0878D /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FFA220FAA00F00A0878D /* trophy.png */; };
 		E29E589220F5C1970031DA33 /* AESStadium.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589120F5C1970031DA33 /* AESStadium.m */; };
 		E29E589520F5C55D0031DA33 /* AESParticipatingTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589420F5C55D0031DA33 /* AESParticipatingTeam.m */; };
 		E29E589B20F5C8070031DA33 /* AESGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589A20F5C8070031DA33 /* AESGroup.m */; };
@@ -20,7 +22,6 @@
 		E29E58A720F5CF480031DA33 /* AESKnockoutMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */; };
 		E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */; };
 		E2B5DBD020F6963E002C9924 /* AESGroupsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */; };
-		E2D7044020F7D65E0096DA4B /* cell_image_selected_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */; };
 		E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADC20F3DA790087BA04 /* Assets.xcassets */; };
 		E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */; };
 		E2FFFAE320F3DA790087BA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAE220F3DA790087BA04 /* main.m */; };
@@ -35,10 +36,12 @@
 		E27F898520FA36B20046C717 /* AESGroupDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESGroupDetailViewController.h; sourceTree = "<group>"; };
 		E27F898620FA36B20046C717 /* AESGroupDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESGroupDetailViewController.m; sourceTree = "<group>"; };
 		E27F898720FA36B20046C717 /* AESGroupDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AESGroupDetailViewController.xib; sourceTree = "<group>"; };
-		E27F898A20FA3E990046C717 /* russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png"; sourceTree = "<group>"; };
 		E27F898C20FA42BA0046C717 /* AESGroupDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESGroupDetailTableViewCell.h; sourceTree = "<group>"; };
 		E27F898D20FA42BA0046C717 /* AESGroupDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESGroupDetailTableViewCell.m; sourceTree = "<group>"; };
 		E27F898E20FA42BA0046C717 /* AESGroupDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AESGroupDetailTableViewCell.xib; sourceTree = "<group>"; };
+		E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_image_selected_blue.png; sourceTree = "<group>"; };
+		E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groupDetailBackgroundImage.png; sourceTree = "<group>"; };
+		E296FFA220FAA00F00A0878D /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
 		E29E589020F5C1970031DA33 /* AESStadium.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESStadium.h; sourceTree = "<group>"; };
 		E29E589120F5C1970031DA33 /* AESStadium.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESStadium.m; sourceTree = "<group>"; };
 		E29E589320F5C55D0031DA33 /* AESParticipatingTeam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESParticipatingTeam.h; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AESGroupsTableViewCell.xib; sourceTree = "<group>"; };
 		E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESGroupsTableViewCell.m; sourceTree = "<group>"; };
 		E2B5DBCE20F6963E002C9924 /* AESGroupsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESGroupsTableViewCell.h; sourceTree = "<group>"; };
-		E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_image_selected_blue.png; sourceTree = "<group>"; };
 		E2FFFAD020F3DA710087BA04 /* RussiaFIFAWorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaFIFAWorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFFADC20F3DA790087BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FFFADF20F3DA790087BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,8 +100,9 @@
 		E2D7044120F7D6F10096DA4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E27F898A20FA3E990046C717 /* russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png */,
-				E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */,
+				E296FFA220FAA00F00A0878D /* trophy.png */,
+				E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */,
+				E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -235,10 +238,11 @@
 				E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */,
 				E27F898920FA36B20046C717 /* AESGroupDetailViewController.xib in Resources */,
 				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
+				E296FFA320FAA00F00A0878D /* trophy.png in Resources */,
+				E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */,
+				E296FF9B20FA64F200A0878D /* cell_image_selected_blue.png in Resources */,
 				E27F899020FA42BA0046C717 /* AESGroupDetailTableViewCell.xib in Resources */,
 				E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */,
-				E2D7044020F7D65E0096DA4B /* cell_image_selected_blue.png in Resources */,
-				E27F898B20FA3E9A0046C717 /* russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
