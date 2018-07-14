@@ -38,15 +38,10 @@
     UINib *nib = [UINib nibWithNibName:@"AESGroupsTableViewCell" bundle:nil]; // nil forces the compiler to look in the main bundle
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AESGroupsTableViewCell"];
     
-    /*
-     
-     COMMEMNT OUT FOR NETWORK CALL
-     
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"Tournament Groups Generated" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-        // upon call return, reload table data
-        [self.tableView reloadData];
-    }];
-     */
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"No World Cup Data" object:nil];
+     //COMMEMNT OUT FOR NETWORK CALL
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"Tournament Groups Generated" object:nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -58,6 +53,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - actions
+
+
+
+- (void)receiveNotification:(NSNotification *)notification{
+    if ([notification.name isEqualToString:@"No World Cup Data"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No World Cup Data" message:@"Encounted problem retrieving the world cup data. Please try again later." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:action];
+        
+        // present the controller
+        [self presentViewController:alert animated:YES completion:nil];
+    }else if ([notification.name isEqualToString:@"Tournament Groups Generated"]){
+        // reload the table view
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view data source

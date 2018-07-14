@@ -14,6 +14,17 @@
 
 @implementation AESKnockoutStages
 
+#pragma mark - initializers
+
+- (instancetype)initWithStyle:(UITableViewStyle)style{
+    
+    if (self =  [super initWithStyle:style]) {
+    }
+    return self;
+}
+
+#pragma mark - view life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

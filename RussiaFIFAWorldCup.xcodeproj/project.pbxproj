@@ -15,6 +15,7 @@
 		E29E58A720F5CF480031DA33 /* AESKnockoutMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */; };
 		E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */; };
 		E2B5DBD020F6963E002C9924 /* AESGroupsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */; };
+		E2D7044020F7D65E0096DA4B /* cell_image_selected_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */; };
 		E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADC20F3DA790087BA04 /* Assets.xcassets */; };
 		E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */; };
 		E2FFFAE320F3DA790087BA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAE220F3DA790087BA04 /* main.m */; };
@@ -22,7 +23,6 @@
 		E2FFFAEF20F3DB700087BA04 /* AESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */; };
 		E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFAF020F3DBE30087BA04 /* AESStoryBoard.storyboard */; };
 		E2FFFAF420F3DD4F0087BA04 /* AESKnockoutStages.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAF320F3DD4F0087BA04 /* AESKnockoutStages.m */; };
-		E2FFFAF620F3DE790087BA04 /* cell_image_selected_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFAF520F3DE790087BA04 /* cell_image_selected_blue.png */; };
 		E2FFFAFE20F3E3860087BA04 /* AESWorldCupStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAFD20F3E3860087BA04 /* AESWorldCupStore.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +42,7 @@
 		E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AESGroupsTableViewCell.xib; sourceTree = "<group>"; };
 		E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESGroupsTableViewCell.m; sourceTree = "<group>"; };
 		E2B5DBCE20F6963E002C9924 /* AESGroupsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESGroupsTableViewCell.h; sourceTree = "<group>"; };
+		E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_image_selected_blue.png; sourceTree = "<group>"; };
 		E2FFFAD020F3DA710087BA04 /* RussiaFIFAWorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaFIFAWorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFFADC20F3DA790087BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FFFADF20F3DA790087BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		E2FFFAF020F3DBE30087BA04 /* AESStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AESStoryBoard.storyboard; sourceTree = "<group>"; };
 		E2FFFAF220F3DD4F0087BA04 /* AESKnockoutStages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutStages.h; sourceTree = "<group>"; };
 		E2FFFAF320F3DD4F0087BA04 /* AESKnockoutStages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockoutStages.m; sourceTree = "<group>"; };
-		E2FFFAF520F3DE790087BA04 /* cell_image_selected_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_image_selected_blue.png; sourceTree = "<group>"; };
 		E2FFFAFC20F3E3860087BA04 /* AESWorldCupStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESWorldCupStore.h; sourceTree = "<group>"; };
 		E2FFFAFD20F3E3860087BA04 /* AESWorldCupStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESWorldCupStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +80,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E2D7044120F7D6F10096DA4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2D7043F20F7D65E0096DA4B /* cell_image_selected_blue.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E2FFFAC720F3DA700087BA04 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +107,13 @@
 		E2FFFAD220F3DA710087BA04 /* RussiaFIFAWorldCup */ = {
 			isa = PBXGroup;
 			children = (
+				E2D7044120F7D6F10096DA4B /* Resources */,
 				E2B5DBC620F694EE002C9924 /* Views */,
 				E2FFFAED20F3DB700087BA04 /* AESAppDelegate.h */,
 				E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */,
 				E2FFFAFB20F3E36A0087BA04 /* Models */,
 				E2FFFAE920F3DB0B0087BA04 /* View Controllers */,
 				E2FFFADC20F3DA790087BA04 /* Assets.xcassets */,
-				E2FFFAF520F3DE790087BA04 /* cell_image_selected_blue.png */,
 				E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */,
 				E2FFFAE120F3DA790087BA04 /* Info.plist */,
 				E2FFFAE220F3DA790087BA04 /* main.m */,
@@ -204,11 +212,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FFFAF620F3DE790087BA04 /* cell_image_selected_blue.png in Resources */,
 				E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */,
 				E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */,
 				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
 				E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */,
+				E2D7044020F7D65E0096DA4B /* cell_image_selected_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

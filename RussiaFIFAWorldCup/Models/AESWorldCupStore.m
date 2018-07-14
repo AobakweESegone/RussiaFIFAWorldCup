@@ -84,7 +84,6 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     NSFileManager *manager = [NSFileManager defaultManager];
     NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     
-    /*
      //SERVICE CALL - ONLINE USE
     
      NSString *requestURLString = HOST_URL;
@@ -95,7 +94,9 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
      NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
      
      if (!data) {
-     NSLog(@"\n\nFailed to retrieve data. Encounted the following problem:\n%@", error.localizedDescription);
+         // notify interested observers
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
+         
      return;
      }
          
@@ -124,24 +125,24 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
      }];
      
      [dataTask resume];
-    */
+    
     
     // OFFLINE USE
     
-    NSString *wcDataFile = [documentDirectory stringByAppendingPathComponent:@"responseData.json"];
-    if ([manager fileExistsAtPath:wcDataFile]) {
-        NSData *wcDataFromFile = [NSData dataWithContentsOfFile:wcDataFile];
-        NSDictionary *wcjsonData = [NSJSONSerialization JSONObjectWithData:wcDataFromFile options:0 error:nil];
-        
-        // consume data
-        self.privateStadiums = wcjsonData[@"stadiums"];
-        self.privateTeams = wcjsonData[@"teams"];
-        self.privateGroups = wcjsonData[@"groups"];
-        self.privateKnockouts = wcjsonData[@"knockout"];
-        
-        // create tournament groups
-        [self generateTournamentGroups];
-    }
+//    NSString *wcDataFile = [documentDirectory stringByAppendingPathComponent:@"responseData.json"];
+//    if ([manager fileExistsAtPath:wcDataFile]) {
+//        NSData *wcDataFromFile = [NSData dataWithContentsOfFile:wcDataFile];
+//        NSDictionary *wcjsonData = [NSJSONSerialization JSONObjectWithData:wcDataFromFile options:0 error:nil];
+//
+//        // consume data
+//        self.privateStadiums = wcjsonData[@"stadiums"];
+//        self.privateTeams = wcjsonData[@"teams"];
+//        self.privateGroups = wcjsonData[@"groups"];
+//        self.privateKnockouts = wcjsonData[@"knockout"];
+//
+//        // create tournament groups
+//        [self generateTournamentGroups];
+//    }
 }
 
 - (void)generateTournamentGroups{
