@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AESGroupDetailViewController">
+            <connections>
+                <outlet property="groupDataTableView" destination="eGK-Ln-bOM" id="PVk-0d-nim"/>
+                <outlet property="groupName" destination="CCV-Mj-Bbd" id="tOz-TM-2Ox"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-Kj-1c0">
+                    <rect key="frame" x="16" y="20" width="343" height="627"/>
+                    <string key="image">russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png</string>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCV-Mj-Bbd">
+                    <rect key="frame" x="16" y="20" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="aIM-5E-kFS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group winner:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJq-md-HDD">
+                    <rect key="frame" x="16" y="49" width="160" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="GhD-5D-IeM"/>
+                        <constraint firstAttribute="width" constant="160" id="ewX-fZ-u07"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group runner-up:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="843-JR-hEx">
+                    <rect key="frame" x="16" y="78" width="160" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="2cD-Dl-SQ3"/>
+                        <constraint firstAttribute="height" constant="21" id="nMo-hd-lDm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="team a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-dl-Mwt">
+                    <rect key="frame" x="184" y="49" width="175" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="D1I-V3-qld"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="team b" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDX-36-AAT">
+                    <rect key="frame" x="184" y="78" width="175" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="OkM-vE-tsq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-Ln-bOM">
+                    <rect key="frame" x="16" y="107" width="343" height="499"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2Gb-NI-XCb"/>
+                        <outlet property="delegate" destination="-1" id="G3x-AS-loE"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-NQ-NQ7">
+                    <rect key="frame" x="16" y="614" width="343" height="33"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Group Stages"/>
+                    <connections>
+                        <action selector="groupStages:" destination="-1" eventType="touchUpInside" id="USF-bp-7m0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="eGK-Ln-bOM" secondAttribute="trailing" constant="16" id="1cu-3i-Z9u"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nx7-dl-Mwt" secondAttribute="trailing" constant="16" id="4k2-J6-Jjy"/>
+                <constraint firstItem="dDX-36-AAT" firstAttribute="top" secondItem="nx7-dl-Mwt" secondAttribute="bottom" constant="8" id="67k-Mv-LKM"/>
+                <constraint firstItem="CCV-Mj-Bbd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="9be-Td-98D"/>
+                <constraint firstItem="nx7-dl-Mwt" firstAttribute="leading" secondItem="JJq-md-HDD" secondAttribute="trailing" constant="8" id="9op-LG-rMH"/>
+                <constraint firstItem="hAP-Kj-1c0" firstAttribute="bottom" secondItem="k0S-NQ-NQ7" secondAttribute="bottom" id="CKW-OX-U5y"/>
+                <constraint firstItem="843-JR-hEx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="G3O-3f-fow"/>
+                <constraint firstItem="hAP-Kj-1c0" firstAttribute="trailing" secondItem="k0S-NQ-NQ7" secondAttribute="trailing" id="Gfh-Pd-Hqy"/>
+                <constraint firstItem="hAP-Kj-1c0" firstAttribute="leading" secondItem="k0S-NQ-NQ7" secondAttribute="leading" id="Ia6-y6-X07"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dDX-36-AAT" secondAttribute="trailing" constant="16" id="LD4-Fb-ju0"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CCV-Mj-Bbd" secondAttribute="trailing" constant="16" id="MyD-t9-yFL"/>
+                <constraint firstItem="nx7-dl-Mwt" firstAttribute="top" secondItem="CCV-Mj-Bbd" secondAttribute="bottom" constant="8" id="Ngr-of-Cse"/>
+                <constraint firstItem="eGK-Ln-bOM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="PAw-Sk-9dY"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="k0S-NQ-NQ7" secondAttribute="bottom" constant="20" id="RbK-n0-Sjk"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="k0S-NQ-NQ7" secondAttribute="trailing" constant="16" id="Tn5-Dt-kWj"/>
+                <constraint firstItem="dDX-36-AAT" firstAttribute="leading" secondItem="843-JR-hEx" secondAttribute="trailing" constant="8" id="V8Y-M6-Qfx"/>
+                <constraint firstItem="k0S-NQ-NQ7" firstAttribute="top" secondItem="eGK-Ln-bOM" secondAttribute="bottom" constant="8" id="VrD-ah-mBL"/>
+                <constraint firstItem="CCV-Mj-Bbd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="WXg-uu-bBO"/>
+                <constraint firstItem="hAP-Kj-1c0" firstAttribute="top" secondItem="CCV-Mj-Bbd" secondAttribute="top" id="Zg6-CP-ZNy"/>
+                <constraint firstItem="843-JR-hEx" firstAttribute="top" secondItem="JJq-md-HDD" secondAttribute="bottom" constant="8" id="eVn-uR-cHs"/>
+                <constraint firstItem="JJq-md-HDD" firstAttribute="top" secondItem="CCV-Mj-Bbd" secondAttribute="bottom" constant="8" id="ete-ZU-Umy"/>
+                <constraint firstItem="k0S-NQ-NQ7" firstAttribute="top" secondItem="eGK-Ln-bOM" secondAttribute="bottom" constant="8" id="gJe-i7-Fg0"/>
+                <constraint firstItem="JJq-md-HDD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="hJv-A3-Ebe"/>
+                <constraint firstItem="eGK-Ln-bOM" firstAttribute="top" secondItem="843-JR-hEx" secondAttribute="bottom" constant="8" id="orr-sb-jVK"/>
+                <constraint firstItem="k0S-NQ-NQ7" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="pIn-kc-DGa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image width="800" height="533">
+            <string key="name">russian-red-background-world-russia-pattern-modern-traditional-elements-trend-vector-illustration-russia-world-cup-red-111835607.png</string>
+        </image>
+    </resources>
+</document>

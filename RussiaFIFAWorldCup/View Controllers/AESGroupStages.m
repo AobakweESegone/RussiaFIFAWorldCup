@@ -10,6 +10,7 @@
 #import "AESWorldCupStore.h"
 #import "AESGroupsTableViewCell.h"
 #import "AESGroup.h"
+#import "AESGroupDetailViewController.h"
 
 @interface AESGroupStages ()
 
@@ -176,6 +177,15 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AESGroup *group = sharedStore.fetchTournmentGroups[indexPath.row];
+    
+    AESGroupDetailViewController *groupDetail = [[AESGroupDetailViewController alloc] initWithNibName:@"AESGroupDetailViewController" bundle:nil];
+    groupDetail.groupName.text = group.name;
+    
+    [self presentViewController:groupDetail animated:YES completion:nil];
 }
 
 /*
