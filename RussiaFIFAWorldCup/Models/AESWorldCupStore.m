@@ -96,8 +96,6 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
      if (!data) {
          // notify interested observers
          [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
-         
-     return;
      }
          
          // write to file
