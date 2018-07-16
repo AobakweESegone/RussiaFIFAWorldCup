@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AESGroup;
 
 @interface AESGroupDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *groupName;
+@property (strong, nonatomic) AESGroup *group;
+@property (strong, nonatomic) NSArray <AESGroup *> *matchesPerGroup;
 
 @end

@@ -11,11 +11,11 @@
 @interface AESGroup : NSObject
 
 @property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, strong, readonly) NSString *winner;
-@property (nonatomic, strong, readonly) NSString *runnerUp;
+@property (nonatomic, readonly) int winner;
+@property (nonatomic, readonly) int runnerUp;
 @property (nonatomic, strong, readonly) NSArray *groupMatches;
 
 #pragma mark - initializer
-- (instancetype)initWithGroupName:(NSString *)name winner:(NSString *)winner runnerUp:(NSString *)runnerUp andGroupMatches:(NSArray *)matches;
+- (instancetype)initWithGroupName:(NSString *)name winner:(int)winner runnerUp:(int)runnerUp andGroupMatches:(NSArray *)matches;
 
 @end

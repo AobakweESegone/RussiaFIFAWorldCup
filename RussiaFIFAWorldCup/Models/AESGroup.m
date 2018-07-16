@@ -11,10 +11,10 @@
 @implementation AESGroup
 
 - (instancetype)init{
-    return [self initWithGroupName:nil winner:nil runnerUp:nil andGroupMatches:nil];
+    return [self initWithGroupName:nil winner:0 runnerUp:0 andGroupMatches:nil];
 }
 
-- (instancetype)initWithGroupName:(NSString *)name winner:(NSString *)winner runnerUp:(NSString *)runnerUp andGroupMatches:(NSArray *)matches{
+- (instancetype)initWithGroupName:(NSString *)name winner:(int)winner runnerUp:(int)runnerUp andGroupMatches:(NSArray *)matches{
     self = [super init];
     
     if (self) {

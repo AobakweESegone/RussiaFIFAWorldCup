@@ -99,8 +99,8 @@
     for (int i = 0; i < teamData.count; i++) {
         
         if (i == 0) {
-            cell.iconOne.text = [teamData[i] objectForKey:@"emojiString"];
-            cell.teamOne.text = [teamData[i] objectForKey:@"fifaCode"];
+            //cell.iconOne.text = [teamData[i] objectForKey:@"emojiString"];
+            cell.teamOne.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:@" "] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
             NSNumber *gp = [teamData[i] objectForKey:@"teamGP"];
             cell.teamOneGP.text = [NSString stringWithFormat:@"%ld",(long)gp.intValue];
             NSNumber *pts = [teamData[i] objectForKey:@"teamPts"];
@@ -118,7 +118,7 @@
             NSNumber *gd = [teamData[i] objectForKey:@"teamGD"];
             cell.teamOneGD.text = [NSString stringWithFormat:@"%ld",(long)gd.intValue];
         }else if (i == 1){
-            cell.teamTwo.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:[NSString stringWithFormat:@" "]] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
+            cell.teamTwo.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:@" "] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
             NSNumber *gp = [teamData[i] objectForKey:@"teamGP"];
             cell.teamTwoGP.text = [NSString stringWithFormat:@"%ld",(long)gp.intValue];
             NSNumber *pts = [teamData[i] objectForKey:@"teamPts"];
@@ -136,7 +136,7 @@
             NSNumber *gd = [teamData[i] objectForKey:@"teamGD"];
             cell.teamTwoGD.text = [NSString stringWithFormat:@"%ld",(long)gd.intValue];
         }else if (i == 2){
-            cell.teamThree.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:[NSString stringWithFormat:@" "]] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
+            cell.teamThree.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:@" "] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
             NSNumber *gp = [teamData[i] objectForKey:@"teamGP"];
             cell.teamThreeGP.text = [NSString stringWithFormat:@"%ld",(long)gp.intValue];
             NSNumber *pts = [teamData[i] objectForKey:@"teamPts"];
@@ -154,7 +154,7 @@
             NSNumber *gd = [teamData[i] objectForKey:@"teamGD"];
             cell.teamThreeGD.text = [NSString stringWithFormat:@"%ld",(long)gd.intValue];
         }else if (i == 3){
-            cell.teamFour.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:[NSString stringWithFormat:@" "]] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
+            cell.teamFour.text = [[[teamData[i] objectForKey:@"emojiString"] stringByAppendingString:@" "] stringByAppendingString:[teamData[i] objectForKey:@"fifaCode"]];
             NSNumber *gp = [teamData[i] objectForKey:@"teamGP"];
             cell.teamFourGP.text = [NSString stringWithFormat:@"%ld",(long)gp.intValue];
             NSNumber *pts = [teamData[i] objectForKey:@"teamPts"];
@@ -183,7 +183,8 @@
     AESGroup *group = sharedStore.fetchTournmentGroups[indexPath.row];
     
     AESGroupDetailViewController *groupDetail = [[AESGroupDetailViewController alloc] initWithNibName:@"AESGroupDetailViewController" bundle:nil];
-    groupDetail.groupName.text = group.name;
+    groupDetail.group = group;
+    groupDetail.matchesPerGroup = [sharedStore fetchMatchesPerGroup:group];
     
     [self presentViewController:groupDetail animated:YES completion:nil];
 }

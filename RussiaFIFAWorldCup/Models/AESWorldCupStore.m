@@ -86,61 +86,61 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     
     //SERVICE CALL - ONLINE USE
     
-    NSString *requestURLString = HOST_URL;
-    NSURL *url = [NSURL URLWithString:requestURLString];
+//    NSString *requestURLString = HOST_URL;
+//    NSURL *url = [NSURL URLWithString:requestURLString];
+//
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//
+//    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        if (!data) {
+//            // notify interested observers
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
+//        }
+//
+//        // write to file
+//        NSString *wcDataFile = [documentDirectory stringByAppendingPathComponent:@"responseData.json"];
+//
+//        if ([manager createFileAtPath:wcDataFile contents:data attributes:nil]){
+//            // read from file
+//            NSData *wcDataFromFile = [NSData dataWithContentsOfFile:wcDataFile];
+//            NSDictionary *wcjsonData = [NSJSONSerialization JSONObjectWithData:wcDataFromFile options:0 error:nil];
+//
+//            // consume data
+//            self.privateStadiums = wcjsonData[@"stadiums"];
+//            self.privateTeams = wcjsonData[@"teams"];
+//            self.privateGroups = wcjsonData[@"groups"];
+//            self.privateKnockouts = wcjsonData[@"knockout"];
+//        }
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            // run groups on the main thread
+//            [self generateTournamentGroups];
+//            // inform observer that the call has returned
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"Tournament Groups Generated" object:nil userInfo:nil];
+//        });
+//
+//    }];
+//
+//    [dataTask resume];
+//
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // OFFLINE USE
     
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        if (!data) {
-            // notify interested observers
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
-        }
-        
-        // write to file
         NSString *wcDataFile = [documentDirectory stringByAppendingPathComponent:@"responseData.json"];
-        
-        if ([manager createFileAtPath:wcDataFile contents:data attributes:nil]){
-            // read from file
+        if ([manager fileExistsAtPath:wcDataFile]) {
             NSData *wcDataFromFile = [NSData dataWithContentsOfFile:wcDataFile];
             NSDictionary *wcjsonData = [NSJSONSerialization JSONObjectWithData:wcDataFromFile options:0 error:nil];
-            
+    
             // consume data
             self.privateStadiums = wcjsonData[@"stadiums"];
             self.privateTeams = wcjsonData[@"teams"];
             self.privateGroups = wcjsonData[@"groups"];
             self.privateKnockouts = wcjsonData[@"knockout"];
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // run groups on the main thread
+    
+            // create tournament groups
             [self generateTournamentGroups];
-            // inform observer that the call has returned
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"Tournament Groups Generated" object:nil userInfo:nil];
-        });
-        
-    }];
-    
-    [dataTask resume];
-    
-    
-    // OFFLINE USE
-    
-    //    NSString *wcDataFile = [documentDirectory stringByAppendingPathComponent:@"responseData.json"];
-    //    if ([manager fileExistsAtPath:wcDataFile]) {
-    //        NSData *wcDataFromFile = [NSData dataWithContentsOfFile:wcDataFile];
-    //        NSDictionary *wcjsonData = [NSJSONSerialization JSONObjectWithData:wcDataFromFile options:0 error:nil];
-    //
-    //        // consume data
-    //        self.privateStadiums = wcjsonData[@"stadiums"];
-    //        self.privateTeams = wcjsonData[@"teams"];
-    //        self.privateGroups = wcjsonData[@"groups"];
-    //        self.privateKnockouts = wcjsonData[@"knockout"];
-    //
-    //        // create tournament groups
-    //        [self generateTournamentGroups];
-    //    }
+        }
 }
 
 - (void)generateTournamentGroups{
@@ -153,7 +153,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         NSDictionary *groupDict = groups[groupName];
         
         // create an AESGroup
-        AESGroup *aGroup = [[AESGroup alloc] initWithGroupName:[groupDict objectForKey:@"name"] winner:[groupDict objectForKey:@"winner"] runnerUp:[groupDict objectForKey:@"runnerup"] andGroupMatches:[groupDict objectForKey:@"matches"]];
+        AESGroup *aGroup = [[AESGroup alloc] initWithGroupName:[groupDict objectForKey:@"name"] winner:[[groupDict objectForKey:@"winner"] intValue] runnerUp:[[groupDict objectForKey:@"runnerup"] intValue] andGroupMatches:[groupDict objectForKey:@"matches"]];
         
         [tournamentGroups addObject:aGroup];
     }

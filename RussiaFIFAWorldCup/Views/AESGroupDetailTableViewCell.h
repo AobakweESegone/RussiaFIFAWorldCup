@@ -10,4 +10,15 @@
 
 @interface AESGroupDetailTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *homeTeam;
+@property (weak, nonatomic) IBOutlet UILabel *awayTeam;
+@property (weak, nonatomic) IBOutlet UILabel *homeTeamScore;
+@property (weak, nonatomic) IBOutlet UILabel *awayTeamScore;
+
+@property (weak, nonatomic) IBOutlet UILabel *matchNumber;
+@property (weak, nonatomic) IBOutlet UILabel *matchDay;
+@property (weak, nonatomic) IBOutlet UILabel *matchDate;
+@property (weak, nonatomic) IBOutlet UILabel *matchPlayTime;
+@property (weak, nonatomic) IBOutlet UIButton *stadiumUsed;
+
 @end

@@ -198,6 +198,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="awayTeam" destination="IoL-ay-F25" id="Lag-lN-1qY"/>
+                <outlet property="awayTeamScore" destination="1Fj-wF-fXN" id="Xbp-jI-k2X"/>
+                <outlet property="homeTeam" destination="Z3n-Yh-NrQ" id="EBx-Xn-tET"/>
+                <outlet property="homeTeamScore" destination="lsa-dV-LGF" id="n46-pv-5fz"/>
+                <outlet property="matchDate" destination="ZIL-mB-CVj" id="Dn3-7t-zPJ"/>
+                <outlet property="matchDay" destination="pvL-DE-C7s" id="JNg-Ag-z3M"/>
+                <outlet property="matchNumber" destination="IlA-wV-MPy" id="CXx-JZ-T09"/>
+                <outlet property="matchPlayTime" destination="GmG-4W-UZG" id="dsI-X0-Wvw"/>
+                <outlet property="stadiumUsed" destination="JfY-TT-pQl" id="uLK-Xi-y6C"/>
+            </connections>
             <point key="canvasLocation" x="34" y="175"/>
         </tableViewCell>
     </objects>
