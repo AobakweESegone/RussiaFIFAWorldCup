@@ -12,6 +12,7 @@
 #import "AESGroup.h"
 #import "AESWorldCupStore.h"
 #import "AESGroupMatch.h"
+#import "AESStadium.h"
 
 @interface AESGroupDetailViewController ()
 
@@ -35,6 +36,17 @@
 #pragma mark - initializer(s)
 
 #pragma mark - view life cycle
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Construction Underway!" message:@"Not Complete...lot of bugs to fix!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
+    // present the controller
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -111,10 +123,12 @@
     AESWorldCupStore *sharedStore = [AESWorldCupStore sharedStore];
     
     for (int i = 0; i < arrayOfMatches.count; i++){
+        AESGroupMatch *singleMatch = arrayOfMatches[i];
+        
         NSArray *teams = [sharedStore fetchTeams];
+        NSArray *stadiums = [sharedStore fetchStadiums];
         
         if (i == indexPath.row) {
-            AESGroupMatch *singleMatch = arrayOfMatches[i];
             for (AESParticipatingTeam *team in teams) {
                 if (singleMatch.homeTeam == team.teamID) {
                     cell.homeTeam.text = [[[NSString stringWithString:team.emojiString] stringByAppendingString:@" "] stringByAppendingString:team.teamName];
@@ -127,6 +141,18 @@
             cell.matchNumber.text = [NSString stringWithFormat:@"%@", singleMatch.matchName];
             cell.matchDay.text = [NSString stringWithFormat:@"%d", singleMatch.matchDay];
             cell.matchDate.text = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
+        }
+        
+        for (AESStadium *stadium in stadiums) {
+            NSNumber *n = (NSNumber *)singleMatch.stadiumPlayed;
+            int stadiumID = n.intValue;
+            //NSString *stadiumID = [NSString stringWithFormat:@"%d", s.stadiumID];
+            
+            //int intValue = [lValue intValue];
+            //int stadiumID = [x intValue];
+            if (stadiumID == stadium.stadiumID) {
+                cell.stadiumUsed.titleLabel.text = stadium.stadiumName;
+            }
         }
     }
     
