@@ -33,6 +33,7 @@
     NSString *runnerUpmojiString;
     
     AESWorldCupStore *sharedStore;
+    NSArray<AESStadium *> *stadiums;
 }
 
 #pragma mark - initializer(s)
@@ -63,6 +64,8 @@
     sharedStore = [AESWorldCupStore sharedStore];
     
     groupMatches = [sharedStore fetchGroupMatchesInGroup:self.group];
+    stadiums = [sharedStore fetchStadiums];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,7 +130,7 @@
         AESGroupMatch *singleMatch = groupMatches[i];
         
         NSArray *teams = [sharedStore fetchTeams];
-        NSArray *stadiums = [sharedStore fetchStadiums];
+        AESStadium *stadium = [sharedStore fetchStadiumPerMatch:singleMatch];
         
         if (i == indexPath.row) {
             for (AESParticipatingTeam *team in teams) {
@@ -142,19 +145,10 @@
             cell.matchNumber.text = [NSString stringWithFormat:@"%@", singleMatch.matchName];
             cell.matchDay.text = [NSString stringWithFormat:@"%d", singleMatch.matchDay];
             cell.matchDate.text = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
+            [cell.stadiumUsed setTitle:stadium.stadiumName forState:UIControlStateNormal];
         }
         
-        for (AESStadium *stadium in stadiums) {
-            NSNumber *n = (NSNumber *)singleMatch.stadiumPlayed;
-            int stadiumID = n.intValue;
-            //NSString *stadiumID = [NSString stringWithFormat:@"%d", s.stadiumID];
-            
-            //int intValue = [lValue intValue];
-            //int stadiumID = [x intValue];
-            if (stadiumID == stadium.stadiumID) {
-                cell.stadiumUsed.titleLabel.text = stadium.stadiumName;
-            }
-        }
+        
     }
     
     

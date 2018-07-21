@@ -34,7 +34,6 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     NSMutableArray *participatingTeams;
     NSMutableArray *teamsPerGroup;
     NSMutableArray *matchesPerGroup;
-    NSMutableArray *stadiumsPerGroup;
     NSArray *teamsData;
 }
 
@@ -190,12 +189,10 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
 
 - (void)teamsDataPerGroup:(AESGroup *)agroup{
     teamsPerGroup = [[NSMutableArray alloc] init];
-    stadiumsPerGroup = [[NSMutableArray alloc] init];;
     matchesPerGroup = [[NSMutableArray alloc] init];
     
     NSArray *groupMatches = agroup.groupMatches;
     NSArray *teams = [self fetchTeams];
-    NSArray *stadiums = [self fetchStadiums];
     
     for (NSDictionary *m in groupMatches) {
         // find teams in matches
@@ -213,18 +210,8 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
             }
         }
         
-        // find stadiums used per match
-        for (AESStadium *s in stadiums) {
-            // add to list
-            if (![stadiumsPerGroup containsObject:[NSNumber numberWithInt:s.stadiumID]]) {
-                [stadiumsPerGroup addObject:[NSDictionary dictionaryWithObjects:@[[NSNumber numberWithInt:s.stadiumID], s.stadiumName, s.stadiumCity] forKeys:@[@"id", @"name", @"city"]]];
-            }else{
-                continue;
-            }
-        }
-        
         // create AESMatches per group
-        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:m[@"stadium"] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
+        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
         
         [matchesPerGroup addObject:groupMatch];
     }
@@ -233,8 +220,19 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     [self statsForGroupTeams:teamsPerGroup playedMatches:matchesPerGroup];
 }
 
-- (NSArray *)fetchStadiumsPerGroup:(AESGroup *)agroup{
-    return stadiumsPerGroup;
+- (AESStadium *)fetchStadiumPerMatch:(AESGroupMatch *)match{
+    int stadiumUsed = match.stadiumPlayed;
+    AESStadium *stadium;
+    
+    // find stadiums used per match
+    for (AESStadium *s in tournamentStadiums) {
+        if (stadiumUsed == s.stadiumID) {
+            stadium = [[AESStadium alloc] initWithStadiumID:s.stadiumID stadiumName:s.stadiumName stadiumCity:s.stadiumCity andStadiumImage:s.stadiumImage];
+            break;
+        }
+    }
+    
+    return stadium;
 }
 
 - (NSArray *)fetchteamsDataPerGroup:(AESGroup *)agroup{
@@ -347,7 +345,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     [groupMatches enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *m = obj;
         
-        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:m[@"stadium"] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
+        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
         
         [matchesPerGroup addObject:groupMatch];
     }];

@@ -7,7 +7,6 @@
 //
 
 #import "AESGroup.h"
-#import "AESStadium.h"
 
 @interface AESGroupMatch : AESGroup
 
@@ -17,12 +16,12 @@
 @property (nonatomic, readonly) int homeTeamGoals;
 @property (nonatomic, readonly) int awayTeamGoals;
 @property (nonatomic, strong, readonly) NSDate *matchDate;
-@property (nonatomic, strong, readonly) AESStadium *stadiumPlayed;
+@property (nonatomic, readonly) int stadiumPlayed;
 @property (nonatomic, readonly) BOOL isFinished;
 @property (nonatomic, readonly) int matchDay;
 
 #pragma mark - initializer
 
-- initWithMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals matchDate:(NSDate *)matchDate stadium:(AESStadium *)stadiumPlayed finished:(BOOL)isFinished andMatchDay:(int)matchDay;
+- initWithMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals matchDate:(NSDate *)matchDate stadium:(int)stadiumPlayed finished:(BOOL)isFinished andMatchDay:(int)matchDay;
 
 @end

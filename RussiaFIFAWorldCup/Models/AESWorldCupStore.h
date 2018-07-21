@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AESGroup.h"
+
+@class AESGroup;
+@class AESGroupMatch;
+@class AESStadium;
 
 @interface AESWorldCupStore : NSObject
 
@@ -28,7 +31,7 @@
 
 - (NSArray *)fetchMatchesPerGroup:(AESGroup *)agroup;
 
-- (NSArray *)fetchStadiumsPerGroup:(AESGroup *)agroup;
+- (AESStadium *)fetchStadiumPerMatch:(AESGroupMatch *)match;
 
 - (NSArray *)fetchTeamsData;
 

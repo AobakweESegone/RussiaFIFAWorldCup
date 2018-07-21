@@ -12,8 +12,8 @@
 
 #pragma mark - initialization chain
 
-- (id)initWithMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals matchDate:(NSDate *)matchDate stadium:(AESStadium *)stadiumPlayed finished:(BOOL)isFinished andMatchDay:(int)matchDay{
-    self = [super initWithGroupName:nil winner:nil runnerUp:nil andGroupMatches:nil];
+- (id)initWithMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals matchDate:(NSDate *)matchDate stadium:(int)stadiumPlayed finished:(BOOL)isFinished andMatchDay:(int)matchDay{
+    self = [super initWithGroupName:nil winner:0 runnerUp:0 andGroupMatches:nil];
     
     if (self) {
         _matchName = matchName;
@@ -30,8 +30,8 @@
     return self;
 }
 
-- (instancetype)initWithGroupName:(NSString *)name winner:(NSString *)winner runnerUp:(NSString *)runnerUp andGroupMatches:(NSArray *)matches{
-    return [self initWithMatchName:nil homeTeam:0 awayTeam:0 homeTeamGoals:0 awayTeamGoal:0 matchDate:nil stadium:nil finished:false andMatchDay:0];
+- (instancetype)initWithGroupName:(NSString *)name winner:(int)winner runnerUp:(int)runnerUp andGroupMatches:(NSArray *)matches{
+    return [self initWithMatchName:nil homeTeam:0 awayTeam:0 homeTeamGoals:0 awayTeamGoal:0 matchDate:nil stadium:0 finished:false andMatchDay:0];
 }
 
 - (instancetype)init{
