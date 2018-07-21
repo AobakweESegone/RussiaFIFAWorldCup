@@ -31,6 +31,8 @@
     NSString *winnerEmojiString;
     NSString *runnerup;
     NSString *runnerUpmojiString;
+    
+    AESWorldCupStore *sharedStore;
 }
 
 #pragma mark - initializer(s)
@@ -58,6 +60,9 @@
     
     // get group details
     [self groupDetails:self.group];
+    sharedStore = [AESWorldCupStore sharedStore];
+    
+    groupMatches = [sharedStore fetchGroupMatchesInGroup:self.group];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,18 +117,14 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.matchesPerGroup.count;
+    return groupMatches.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     AESGroupDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AESGroupDetailTableViewCell" forIndexPath:indexPath];
     
-    NSArray *arrayOfMatches = self.matchesPerGroup;
-    
-    AESWorldCupStore *sharedStore = [AESWorldCupStore sharedStore];
-    
-    for (int i = 0; i < arrayOfMatches.count; i++){
-        AESGroupMatch *singleMatch = arrayOfMatches[i];
+    for (int i = 0; i < groupMatches.count; i++){
+        AESGroupMatch *singleMatch = groupMatches[i];
         
         NSArray *teams = [sharedStore fetchTeams];
         NSArray *stadiums = [sharedStore fetchStadiums];

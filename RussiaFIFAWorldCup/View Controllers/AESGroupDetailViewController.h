@@ -12,6 +12,5 @@
 @interface AESGroupDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) AESGroup *group;
-@property (strong, nonatomic) NSArray <AESGroup *> *matchesPerGroup;
 
 @end

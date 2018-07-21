@@ -32,4 +32,6 @@
 
 - (NSArray *)fetchTeamsData;
 
+- (NSArray *)fetchGroupMatchesInGroup:(AESGroup *)group;
+
 @end

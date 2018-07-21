@@ -184,7 +184,6 @@
     
     AESGroupDetailViewController *groupDetail = [[AESGroupDetailViewController alloc] initWithNibName:@"AESGroupDetailViewController" bundle:nil];
     groupDetail.group = group;
-    groupDetail.matchesPerGroup = [sharedStore fetchMatchesPerGroup:group];
     
     [self presentViewController:groupDetail animated:YES completion:nil];
 }
