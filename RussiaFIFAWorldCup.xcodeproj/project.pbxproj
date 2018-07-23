@@ -28,7 +28,6 @@
 		E2FFFAEC20F3DB4B0087BA04 /* AESGroupStages.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAEB20F3DB4B0087BA04 /* AESGroupStages.m */; };
 		E2FFFAEF20F3DB700087BA04 /* AESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */; };
 		E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFAF020F3DBE30087BA04 /* AESStoryBoard.storyboard */; };
-		E2FFFAF420F3DD4F0087BA04 /* AESKnockoutStages.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAF320F3DD4F0087BA04 /* AESKnockoutStages.m */; };
 		E2FFFAFE20F3E3860087BA04 /* AESWorldCupStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAFD20F3E3860087BA04 /* AESWorldCupStore.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +66,6 @@
 		E2FFFAED20F3DB700087BA04 /* AESAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESAppDelegate.h; sourceTree = "<group>"; };
 		E2FFFAEE20F3DB700087BA04 /* AESAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESAppDelegate.m; sourceTree = "<group>"; };
 		E2FFFAF020F3DBE30087BA04 /* AESStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AESStoryBoard.storyboard; sourceTree = "<group>"; };
-		E2FFFAF220F3DD4F0087BA04 /* AESKnockoutStages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutStages.h; sourceTree = "<group>"; };
-		E2FFFAF320F3DD4F0087BA04 /* AESKnockoutStages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockoutStages.m; sourceTree = "<group>"; };
 		E2FFFAFC20F3E3860087BA04 /* AESWorldCupStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESWorldCupStore.h; sourceTree = "<group>"; };
 		E2FFFAFD20F3E3860087BA04 /* AESWorldCupStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESWorldCupStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,8 +143,6 @@
 			children = (
 				E2FFFAEA20F3DB4B0087BA04 /* AESGroupStages.h */,
 				E2FFFAEB20F3DB4B0087BA04 /* AESGroupStages.m */,
-				E2FFFAF220F3DD4F0087BA04 /* AESKnockoutStages.h */,
-				E2FFFAF320F3DD4F0087BA04 /* AESKnockoutStages.m */,
 				E27F898520FA36B20046C717 /* AESGroupDetailViewController.h */,
 				E27F898620FA36B20046C717 /* AESGroupDetailViewController.m */,
 				E27F898720FA36B20046C717 /* AESGroupDetailViewController.xib */,
@@ -253,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2FFFAF420F3DD4F0087BA04 /* AESKnockoutStages.m in Sources */,
 				E29E589E20F5C98B0031DA33 /* AESGroupMatch.m in Sources */,
 				E29E589220F5C1970031DA33 /* AESStadium.m in Sources */,
 				E2FFFAFE20F3E3860087BA04 /* AESWorldCupStore.m in Sources */,

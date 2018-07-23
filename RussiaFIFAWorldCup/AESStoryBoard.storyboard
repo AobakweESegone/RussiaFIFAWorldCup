@@ -36,36 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vck-sh-OJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="-101"/>
-        </scene>
-        <!--Knockout Stages-->
-        <scene sceneID="NSE-l0-LWE">
-            <objects>
-                <tableViewController id="mST-VT-Rw3" customClass="AESKnockoutStages" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6J6-DO-oHg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="knockoutStageCell" id="hrz-Ny-NbL">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hrz-Ny-NbL" id="7RL-ux-J4d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="mST-VT-Rw3" id="ASb-uy-VsQ"/>
-                            <outlet property="delegate" destination="mST-VT-Rw3" id="52K-gN-jEu"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Knockout Stages" id="ofK-1h-ruC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HBf-9r-T24" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1073" y="592"/>
+            <point key="canvasLocation" x="930" y="-240"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2a9-mI-WD4">
@@ -79,7 +50,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BPi-Ga-0oV" kind="relationship" relationship="viewControllers" id="fES-9q-PLE"/>
-                        <segue destination="mST-VT-Rw3" kind="relationship" relationship="viewControllers" id="VDf-rY-J4d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX9-gl-NU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
