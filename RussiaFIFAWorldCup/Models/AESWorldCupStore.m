@@ -12,6 +12,7 @@
 #import "AESParticipatingTeam.h"
 #import "AESGroupMatch.h"
 #import "AESKnockOut.h"
+#import "AESKnockoutMatch.h"
 
 NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/data.json";
 
@@ -260,6 +261,22 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     return stadium;
 }
 
+- (AESStadium *)fetchStadiumPerKnockoutMatch:(AESKnockoutMatch *)match{
+    int stadiumUsed = match.stadiumPlayed;
+    AESStadium *stadium;
+    
+    // find stadiums used per match
+    for (AESStadium *s in tournamentStadiums) {
+        if (stadiumUsed == s.stadiumID) {
+            stadium = [[AESStadium alloc] initWithStadiumID:s.stadiumID stadiumName:s.stadiumName stadiumCity:s.stadiumCity andStadiumImage:s.stadiumImage];
+            break;
+        }
+    }
+    
+    return stadium;
+}
+
+
 - (NSArray *)fetchteamsDataPerGroup:(AESGroup *)agroup{
     return teamsPerGroup;
 }
@@ -373,6 +390,32 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchday"] intValue]];
         
         [matchesPerGroup addObject:groupMatch];
+    }];
+    
+    return matchesPerGroup;
+}
+
+- (NSArray *)fetchGroupMatchesInKnockoutGroup:(AESKnockOut *)group{
+    NSArray *groupMatches = group.matches;
+    NSMutableArray<AESKnockoutMatch *> *matchesPerGroup = [[NSMutableArray alloc] init];
+    
+    [groupMatches enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSDictionary *m = obj;
+        
+        int noHomePenalty = 100;
+        int noAwayPenalty = 100;
+        
+        AESKnockoutMatch *knockoutMatch = nil;
+        
+        if (m[@"home_penalty"] == [NSNull null] && m[@"away_penalty"] == [NSNull null]) {
+            knockoutMatch = [[AESKnockoutMatch alloc] initWithKnockoutMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] homePenaltyGoals:noHomePenalty awayPenaltyGoals:noAwayPenalty matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] winner:[m[@"winner"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchday"] intValue]];
+        }else{
+            knockoutMatch = [[AESKnockoutMatch alloc] initWithKnockoutMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] homePenaltyGoals:[m[@"home_penalty"] intValue] awayPenaltyGoals:[m[@"away_penalty"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] winner:[m[@"winner"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchday"] intValue]];
+        }
+        
+        
+        
+        [matchesPerGroup addObject:knockoutMatch];
     }];
     
     return matchesPerGroup;

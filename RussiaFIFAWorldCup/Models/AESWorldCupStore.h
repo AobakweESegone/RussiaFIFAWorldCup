@@ -11,6 +11,8 @@
 @class AESGroup;
 @class AESGroupMatch;
 @class AESStadium;
+@class AESKnockOut;
+@class AESKnockoutMatch;
 
 @interface AESWorldCupStore : NSObject
 
@@ -32,9 +34,11 @@
 - (NSArray *)fetchMatchesPerGroup:(AESGroup *)agroup;
 
 - (AESStadium *)fetchStadiumPerMatch:(AESGroupMatch *)match;
+- (AESStadium *)fetchStadiumPerKnockoutMatch:(AESKnockoutMatch *)match;
 
 - (NSArray *)fetchTeamsData;
 
 - (NSArray *)fetchGroupMatchesInGroup:(AESGroup *)group;
+- (NSArray *)fetchGroupMatchesInKnockoutGroup:(AESKnockOut *)group;
 
 @end

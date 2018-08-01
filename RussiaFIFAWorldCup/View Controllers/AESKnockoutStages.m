@@ -10,6 +10,7 @@
 #import "AESWorldCupStore.h"
 #import "AESKnockoutTableViewCell.h"
 #import "AESKnockOut.h"
+#import "AESKnockoutDetailViewController.h"
 
 @interface AESKnockoutStages ()
 
@@ -56,6 +57,15 @@
     cell.knockoutStage.text = group.knockoutName;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AESKnockOut *group = sharedStore.fetchTournmentKnockouts[indexPath.row];
+    
+    AESKnockoutDetailViewController *groupDetail = [[AESKnockoutDetailViewController alloc] initWithNibName:@"AESKnockoutDetailViewController" bundle:nil];
+    groupDetail.group = group;
+    
+    [self presentViewController:groupDetail animated:YES completion:nil];
 }
 
 /*

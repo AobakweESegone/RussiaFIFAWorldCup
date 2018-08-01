@@ -12,7 +12,7 @@
 
 #pragma mark - initialization chain
 
-- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSDate *)matchDate stadium:(AESStadium *)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay{
+- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSDate *)matchDate stadium:(int)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay{
     self = [super initWithKnockoutName:nil matches:nil];
     
     if (self) {
@@ -34,7 +34,7 @@
 }
 
 - (instancetype)initWithKnockOutRoundDict:(NSDictionary *)knockOutRoundDict{
-    return [self initWithKnockoutMatchName:nil homeTeam:0 awayTeam:0 homeTeamGoals:0 awayTeamGoal:0 homePenaltyGoals:0 awayPenaltyGoals:0 matchDate:nil stadium:nil winner:0 finished:false andMatchDay:0];
+    return [self initWithKnockoutMatchName:nil homeTeam:0 awayTeam:0 homeTeamGoals:0 awayTeamGoal:0 homePenaltyGoals:0 awayPenaltyGoals:0 matchDate:nil stadium:0 winner:0 finished:false andMatchDay:0];
 }
 
 - (instancetype)init{
