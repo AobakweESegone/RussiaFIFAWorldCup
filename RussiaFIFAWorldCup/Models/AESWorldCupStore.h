@@ -21,9 +21,9 @@
 - (void)fetchWorldCupData;
 
 - (NSArray *)fetchTournmentGroups;
+- (NSArray *)fetchTournmentKnockouts;
 - (NSArray *)fetchStadiums; // all competition stadiums
 - (NSArray *)fetchTeams;
-//- (NSArray *)fetchKnockouts;
 
 - (void)teamsDataPerGroup:(AESGroup *)agroup;
 

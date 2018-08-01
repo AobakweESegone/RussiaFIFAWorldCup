@@ -50,11 +50,41 @@
                     </tabBar>
                     <connections>
                         <segue destination="BPi-Ga-0oV" kind="relationship" relationship="viewControllers" id="fES-9q-PLE"/>
+                        <segue destination="9JE-Uf-TLz" kind="relationship" relationship="viewControllers" id="wh6-76-AJM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX9-gl-NU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121" y="272"/>
+        </scene>
+        <!--Knockout Stages-->
+        <scene sceneID="N1h-5z-9tp">
+            <objects>
+                <tableViewController id="9JE-Uf-TLz" customClass="AESKnockoutStages" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NUA-gJ-gAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="knockoutStages" id="tpT-HS-QML">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpT-HS-QML" id="VRQ-dA-fxh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9JE-Uf-TLz" id="naq-uA-pE9"/>
+                            <outlet property="delegate" destination="9JE-Uf-TLz" id="uqC-e1-9f8"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Knockout Stages" id="wcR-Sd-d1d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e55-XE-zkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="452"/>
         </scene>
     </scenes>
 </document>

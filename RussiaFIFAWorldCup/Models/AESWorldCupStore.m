@@ -11,6 +11,7 @@
 #import "AESStadium.h"
 #import "AESParticipatingTeam.h"
 #import "AESGroupMatch.h"
+#import "AESKnockOut.h"
 
 NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcup-2018/master/data.json";
 
@@ -30,6 +31,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
 
 @implementation AESWorldCupStore{
     NSMutableArray *tournamentGroups;
+    NSMutableArray *tournamentKnockouts;
     NSMutableArray *tournamentStadiums;
     NSMutableArray *participatingTeams;
     NSMutableArray *teamsPerGroup;
@@ -152,10 +154,33 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         
         [tournamentGroups addObject:aGroup];
     }
+    
+    [self generateTournamentKnockouts];
 }
+
+- (void)generateTournamentKnockouts{
+    NSDictionary *groups = self.privateKnockouts;
+    
+    NSArray *arrayOfGroups = @[@"round_16", @"round_8", @"round_4", @"round_2_loser", @"round_2"];
+    tournamentKnockouts = [[NSMutableArray alloc] initWithCapacity:groups.count];
+    
+    for (id groupName in arrayOfGroups) {
+        NSDictionary *groupDict = groups[groupName];
+        
+        // create an AESKnockout
+        AESKnockOut *aKnockout = [[AESKnockOut alloc] initWithKnockoutName:[groupDict objectForKey:@"name"] matches:[groupDict objectForKey:@"matches"]];
+        
+        [tournamentKnockouts addObject:aKnockout];
+    }
+}
+
 
 - (NSArray *)fetchTournmentGroups{
     return tournamentGroups;
+}
+
+- (NSArray *)fetchTournmentKnockouts{
+    return tournamentKnockouts;
 }
 
 - (NSArray *)fetchStadiums{
@@ -211,7 +236,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         }
         
         // create AESMatches per group
-        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
+        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchday"] intValue]];
         
         [matchesPerGroup addObject:groupMatch];
     }
@@ -345,7 +370,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     [groupMatches enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *m = obj;
         
-        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchDay"] intValue]];
+        AESGroupMatch *groupMatch = [[AESGroupMatch alloc] initWithMatchName:m[@"name"] homeTeam:[m[@"home_team"] intValue] awayTeam:[m[@"away_team"] intValue] homeTeamGoals:[m[@"home_result"] intValue] awayTeamGoal:[m[@"away_result"] intValue] matchDate:m[@"date"] stadium:[m[@"stadium"] intValue] finished:m[@"finished"] andMatchDay:[m[@"matchday"] intValue]];
         
         [matchesPerGroup addObject:groupMatch];
     }];
