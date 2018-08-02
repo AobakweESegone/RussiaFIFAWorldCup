@@ -42,13 +42,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Construction Underway!" message:@"Not Complete..." preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    [alert addAction:action];
-    
-    // present the controller
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {

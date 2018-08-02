@@ -12,7 +12,7 @@
 
 #pragma mark - initialization chain
 
-- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSDate *)matchDate stadium:(int)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay{
+- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSString *)matchDate stadium:(int)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay{
     self = [super initWithKnockoutName:nil matches:nil];
     
     if (self) {

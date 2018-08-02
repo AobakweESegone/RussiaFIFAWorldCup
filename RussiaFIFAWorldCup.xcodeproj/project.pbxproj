@@ -432,6 +432,7 @@
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 958MSQTU32;
 				INFOPLIST_FILE = RussiaFIFAWorldCup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +452,7 @@
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 958MSQTU32;
 				INFOPLIST_FILE = RussiaFIFAWorldCup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,7 +18,7 @@
 @property (nonatomic, readonly) int awayTeamGoals;
 @property (nonatomic, readonly) int homeTeamPenaltyGoals;
 @property (nonatomic, readonly) int awayTeamPenaltyGoals;
-@property (nonatomic, strong, readonly) NSDate *matchDate;
+@property (nonatomic, strong, readonly) NSString *matchDate;
 @property (nonatomic, readonly) int stadiumPlayed;
 @property (nonatomic, readonly) int winner;
 @property (nonatomic, readonly) BOOL isFinished;
@@ -26,6 +26,6 @@
 
 #pragma mark - initializer
 
-- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSDate *)matchDate stadium:(int)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay;
+- (instancetype)initWithKnockoutMatchName:(NSString *)matchName homeTeam:(int)homeTeam awayTeam:(int)awayTeam homeTeamGoals:(int)homeGoals awayTeamGoal:(int)awayGoals homePenaltyGoals:(int)homeTeamPenaltyGoals awayPenaltyGoals:(int)awayTeamPenaltyGoals matchDate:(NSString *)matchDate stadium:(int)stadiumPlayed winner:(int)winner finished:(BOOL)isFinished andMatchDay:(int)matchDay;
 
 @end
