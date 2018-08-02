@@ -43,14 +43,12 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNV-cv-3ia">
-                    <rect key="frame" x="16" y="614" width="343" height="30"/>
+                    <rect key="frame" x="16" y="616" width="343" height="31"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="vvp-BM-T5a"/>
+                        <constraint firstAttribute="height" constant="31" id="sW9-d3-5Au"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                    <state key="normal" title="Back to Knockout Stages" backgroundImage="cell_image_selected_blue.png">
-                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
+                    <state key="normal" title="Back to Knockout Stages" backgroundImage="cell_image_selected_blue.png"/>
                     <connections>
                         <action selector="knockoutStages:" destination="-1" eventType="touchUpInside" id="ZEF-EY-gBB"/>
                     </connections>
@@ -58,19 +56,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="bNV-cv-3ia" firstAttribute="top" secondItem="TNj-Za-ZL1" secondAttribute="bottom" constant="8" id="DYH-nd-gwl"/>
+                <constraint firstItem="bNV-cv-3ia" firstAttribute="leading" secondItem="TNj-Za-ZL1" secondAttribute="leading" id="Bb8-WW-sHC"/>
+                <constraint firstItem="bNV-cv-3ia" firstAttribute="trailing" secondItem="TNj-Za-ZL1" secondAttribute="trailing" id="ENk-wx-XWQ"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Ic6-Sj-Dju"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="TNj-Za-ZL1" secondAttribute="trailing" constant="16" id="KGG-8n-Jne"/>
+                <constraint firstItem="bNV-cv-3ia" firstAttribute="top" secondItem="TNj-Za-ZL1" secondAttribute="bottom" constant="10" id="Pdg-C4-Vrw"/>
                 <constraint firstItem="TNj-Za-ZL1" firstAttribute="top" secondItem="IAU-ZF-JtY" secondAttribute="bottom" constant="8" id="S2C-ux-p6G"/>
+                <constraint firstAttribute="bottom" secondItem="bNV-cv-3ia" secondAttribute="bottom" constant="20" symbolic="YES" id="WP2-BY-fYx"/>
                 <constraint firstItem="IAU-ZF-JtY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="XQj-0T-LLZ"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gaB-1E-njy"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IAU-ZF-JtY" secondAttribute="trailing" constant="16" id="pxu-x7-XUe"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="bNV-cv-3ia" secondAttribute="bottom" constant="23" id="r5C-AJ-pXI"/>
-                <constraint firstItem="bNV-cv-3ia" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="tbV-jY-CUn"/>
                 <constraint firstItem="IAU-ZF-JtY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="udB-sm-TIa"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="vcG-r6-ZmY"/>
                 <constraint firstItem="TNj-Za-ZL1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="zbw-T8-ygb"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bNV-cv-3ia" secondAttribute="trailing" constant="16" id="zmO-tf-jpO"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="zoL-pa-IfM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

@@ -113,11 +113,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owb-if-I91">
-                        <rect key="frame" x="16" y="179" width="288" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="zhb-N5-Yyl"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
+                        <rect key="frame" x="16" y="179" width="288" height="31"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                         <state key="normal" title="Stadium X" backgroundImage="cell_image_selected_blue.png"/>
                     </button>
                 </subviews>
@@ -126,11 +123,10 @@
                     <constraint firstItem="aoT-F8-yzo" firstAttribute="top" secondItem="Uqi-nx-5cS" secondAttribute="top" constant="6" id="18o-UK-oZR"/>
                     <constraint firstItem="REM-SA-3y9" firstAttribute="top" secondItem="Uqi-nx-5cS" secondAttribute="top" constant="6" id="2CJ-BB-mMo"/>
                     <constraint firstAttribute="trailing" secondItem="REM-SA-3y9" secondAttribute="trailing" constant="16" id="2OK-S1-hAK"/>
-                    <constraint firstItem="owb-if-I91" firstAttribute="trailing" secondItem="Uqi-nx-5cS" secondAttribute="trailingMargin" id="4fE-S6-0jt"/>
+                    <constraint firstItem="owb-if-I91" firstAttribute="leading" secondItem="zpr-oA-tM0" secondAttribute="leading" id="4Lq-XV-T0v"/>
+                    <constraint firstItem="owb-if-I91" firstAttribute="trailing" secondItem="zpr-oA-tM0" secondAttribute="trailing" id="6eL-th-pfp"/>
                     <constraint firstItem="REM-SA-3y9" firstAttribute="leading" secondItem="Sif-Zc-S4S" secondAttribute="trailing" constant="8" id="Cjk-b7-xHW"/>
                     <constraint firstItem="6KW-dp-cbP" firstAttribute="leading" secondItem="Uqi-nx-5cS" secondAttribute="leadingMargin" id="DL0-wP-RU4"/>
-                    <constraint firstItem="owb-if-I91" firstAttribute="top" secondItem="zpr-oA-tM0" secondAttribute="bottom" constant="17" id="ICk-wF-v0v"/>
-                    <constraint firstItem="owb-if-I91" firstAttribute="leading" secondItem="Uqi-nx-5cS" secondAttribute="leadingMargin" id="Jdq-3y-0BF"/>
                     <constraint firstItem="aoT-F8-yzo" firstAttribute="leading" secondItem="Uqi-nx-5cS" secondAttribute="leading" constant="16" id="L3j-Po-q5J"/>
                     <constraint firstItem="zpr-oA-tM0" firstAttribute="trailing" secondItem="Uqi-nx-5cS" secondAttribute="trailingMargin" id="RDD-Yc-2ko"/>
                     <constraint firstItem="6KW-dp-cbP" firstAttribute="trailing" secondItem="Uqi-nx-5cS" secondAttribute="trailingMargin" id="VQs-eq-jjm"/>
@@ -139,6 +135,7 @@
                     <constraint firstItem="hDC-bO-YPN" firstAttribute="top" secondItem="kEI-Wz-6Fo" secondAttribute="bottom" constant="7" id="Xyn-QI-lGe"/>
                     <constraint firstItem="1eW-yn-3EB" firstAttribute="leading" secondItem="Uqi-nx-5cS" secondAttribute="leadingMargin" id="YO3-7a-Veq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="kEI-Wz-6Fo" secondAttribute="trailing" constant="82" id="YkL-ka-3WU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="owb-if-I91" secondAttribute="bottom" constant="7" id="Ypo-X8-KOe"/>
                     <constraint firstAttribute="trailing" secondItem="XaC-1o-DDM" secondAttribute="trailing" id="ZKV-9M-7s6"/>
                     <constraint firstItem="XaC-1o-DDM" firstAttribute="top" secondItem="Uqi-nx-5cS" secondAttribute="top" id="bRc-yG-BMp"/>
                     <constraint firstItem="hAV-08-XjX" firstAttribute="top" secondItem="REM-SA-3y9" secondAttribute="bottom" constant="2" id="e3L-Qx-IC8"/>
@@ -155,6 +152,7 @@
                     <constraint firstItem="zpr-oA-tM0" firstAttribute="top" secondItem="6KW-dp-cbP" secondAttribute="bottom" constant="8" id="tpB-0d-B0k"/>
                     <constraint firstItem="1eW-yn-3EB" firstAttribute="top" secondItem="aoT-F8-yzo" secondAttribute="bottom" constant="2" id="uMc-ch-ZOD"/>
                     <constraint firstItem="Sif-Zc-S4S" firstAttribute="top" secondItem="Uqi-nx-5cS" secondAttribute="topMargin" id="zlG-BM-6WZ"/>
+                    <constraint firstItem="owb-if-I91" firstAttribute="top" secondItem="zpr-oA-tM0" secondAttribute="bottom" constant="17" id="zn6-8w-ZhK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="4co-RH-iUh"/>
