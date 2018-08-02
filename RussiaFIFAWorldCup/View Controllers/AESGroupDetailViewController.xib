@@ -68,7 +68,7 @@
                 </label>
                 <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-Ln-bOM">
                     <rect key="frame" x="16" y="107" width="343" height="499"/>
-                    <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.29663212439999997" green="0.1691823485" blue="0.12204448919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="2Gb-NI-XCb"/>
                         <outlet property="delegate" destination="-1" id="G3x-AS-loE"/>

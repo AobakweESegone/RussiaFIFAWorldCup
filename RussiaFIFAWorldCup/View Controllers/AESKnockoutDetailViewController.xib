@@ -36,7 +36,7 @@
                 </label>
                 <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNj-Za-ZL1">
                     <rect key="frame" x="16" y="49" width="343" height="557"/>
-                    <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.29663212435233166" green="0.16918234850518316" blue="0.12204448920787073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rBA-Cr-ps2"/>
                         <outlet property="delegate" destination="-1" id="wEb-NF-6YC"/>
