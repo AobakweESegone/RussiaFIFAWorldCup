@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,8 +25,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupDetailBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nn7-lN-7SG">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="knockout label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAU-ZF-JtY">
-                    <rect key="frame" x="16" y="20" width="343" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAU-ZF-JtY">
+                    <rect key="frame" x="16" y="30" width="343" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="m8f-QX-eDI"/>
                     </constraints>
@@ -34,49 +34,34 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNj-Za-ZL1">
-                    <rect key="frame" x="16" y="49" width="343" height="557"/>
-                    <color key="backgroundColor" red="0.29663212435233166" green="0.16918234850518316" blue="0.12204448920787073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNj-Za-ZL1">
+                    <rect key="frame" x="16" y="59" width="343" height="592"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rBA-Cr-ps2"/>
                         <outlet property="delegate" destination="-1" id="wEb-NF-6YC"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNV-cv-3ia">
-                    <rect key="frame" x="16" y="616" width="343" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="31" id="sW9-d3-5Au"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                    <state key="normal" title="Back to Knockout Stages" backgroundImage="cell_image_selected_blue.png"/>
-                    <connections>
-                        <action selector="knockoutStages:" destination="-1" eventType="touchUpInside" id="ZEF-EY-gBB"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="bNV-cv-3ia" firstAttribute="leading" secondItem="TNj-Za-ZL1" secondAttribute="leading" id="Bb8-WW-sHC"/>
-                <constraint firstItem="bNV-cv-3ia" firstAttribute="trailing" secondItem="TNj-Za-ZL1" secondAttribute="trailing" id="ENk-wx-XWQ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="TNj-Za-ZL1" secondAttribute="bottom" constant="16" id="Hbr-BU-UG3"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Ic6-Sj-Dju"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="TNj-Za-ZL1" secondAttribute="trailing" constant="16" id="KGG-8n-Jne"/>
-                <constraint firstItem="bNV-cv-3ia" firstAttribute="top" secondItem="TNj-Za-ZL1" secondAttribute="bottom" constant="10" id="Pdg-C4-Vrw"/>
                 <constraint firstItem="TNj-Za-ZL1" firstAttribute="top" secondItem="IAU-ZF-JtY" secondAttribute="bottom" constant="8" id="S2C-ux-p6G"/>
-                <constraint firstAttribute="bottom" secondItem="bNV-cv-3ia" secondAttribute="bottom" constant="20" symbolic="YES" id="WP2-BY-fYx"/>
                 <constraint firstItem="IAU-ZF-JtY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="XQj-0T-LLZ"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gaB-1E-njy"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="IAU-ZF-JtY" secondAttribute="trailing" constant="16" id="pxu-x7-XUe"/>
-                <constraint firstItem="IAU-ZF-JtY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="udB-sm-TIa"/>
+                <constraint firstItem="IAU-ZF-JtY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="udB-sm-TIa"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="vcG-r6-ZmY"/>
                 <constraint firstItem="TNj-Za-ZL1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="zbw-T8-ygb"/>
                 <constraint firstItem="nn7-lN-7SG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="zoL-pa-IfM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="39.5" y="53.5"/>
+            <point key="canvasLocation" x="39.200000000000003" y="52.623688155922046"/>
         </view>
     </objects>
     <resources>
-        <image name="cell_image_selected_blue.png" width="320" height="100"/>
         <image name="groupDetailBackgroundImage.png" width="800" height="533"/>
     </resources>
 </document>

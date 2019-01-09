@@ -21,6 +21,7 @@
 @property (nonatomic, copy) NSDictionary *privateData;
 
 - (void)fetchWorldCupData;
+- (void)fetchLocalWorldCupData;
 
 - (NSArray *)fetchTournmentGroups;
 - (NSArray *)fetchTournmentKnockouts;

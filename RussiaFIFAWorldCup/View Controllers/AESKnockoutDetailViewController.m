@@ -16,6 +16,7 @@
 @interface AESKnockoutDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *groupName;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeightConstraint;
 
 
 @property (weak, nonatomic) IBOutlet UITableView *knockoutDataTableView;
@@ -43,13 +44,32 @@
     groupMatches = [sharedStore fetchGroupMatchesInKnockoutGroup:self.group];
     stadiums = [sharedStore fetchStadiums];
     
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//
+//    self.tableHeightConstraint.constant = self.knockoutDataTableView.contentSize.height;
+//    [self.knockoutDataTableView needsUpdateConstraints];
+//
+//}
+
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    
+//    // run the code in the main thread since the interface is been altered
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        CGRect frame = self.knockoutDataTableView.frame;
+//        frame.size.height = self.knockoutDataTableView.contentSize.height;
+//        self.knockoutDataTableView.frame = frame;
+//    });
+//}
 
 /*
 #pragma mark - Navigation

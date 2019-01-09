@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pve-Y4-rd6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pve-Y4-rd6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,16 +13,16 @@
         <scene sceneID="IdJ-Xc-uiH">
             <objects>
                 <tableViewController id="BPi-Ga-0oV" customClass="AESGroupStages" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bTU-Kk-E75">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bTU-Kk-E75">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.29663212439999997" green="0.1691823485" blue="0.12204448919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupStageCell" id="GwG-mm-dcR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GwG-mm-dcR" id="gnw-TE-2hw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -32,11 +32,11 @@
                             <outlet property="delegate" destination="BPi-Ga-0oV" id="tTh-6V-bcb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Group Stages" id="b80-5Z-ywB"/>
+                    <navigationItem key="navigationItem" title="Group Stages" id="aX2-bx-sNu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vck-sh-OJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="-240"/>
+            <point key="canvasLocation" x="1868" y="-240.62968515742131"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2a9-mI-WD4">
@@ -49,8 +49,8 @@
                         <color key="barTintColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BPi-Ga-0oV" kind="relationship" relationship="viewControllers" id="fES-9q-PLE"/>
-                        <segue destination="9JE-Uf-TLz" kind="relationship" relationship="viewControllers" id="wh6-76-AJM"/>
+                        <segue destination="vVD-PB-E4g" kind="relationship" relationship="viewControllers" id="fES-9q-PLE"/>
+                        <segue destination="ZXS-xF-gBH" kind="relationship" relationship="viewControllers" id="wh6-76-AJM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX9-gl-NU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,18 +61,19 @@
         <scene sceneID="N1h-5z-9tp">
             <objects>
                 <tableViewController id="9JE-Uf-TLz" customClass="AESKnockoutStages" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NUA-gJ-gAQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NUA-gJ-gAQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.29663212439999997" green="0.1691823485" blue="0.12204448919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="knockoutStages" id="tpT-HS-QML">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpT-HS-QML" id="VRQ-dA-fxh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,11 +81,51 @@
                             <outlet property="delegate" destination="9JE-Uf-TLz" id="uqC-e1-9f8"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Knockout Stages" id="wcR-Sd-d1d"/>
+                    <navigationItem key="navigationItem" title="Knockout Stages" id="mTm-ZP-JjG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e55-XE-zkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="452"/>
+            <point key="canvasLocation" x="1879.2" y="451.12443778110946"/>
+        </scene>
+        <!--Group Stages-->
+        <scene sceneID="t44-mH-LSX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vVD-PB-E4g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Group Stages" id="b80-5Z-ywB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SpJ-47-hFL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BPi-Ga-0oV" kind="relationship" relationship="rootViewController" id="GPL-TK-hqd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzS-iM-9A3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-240.62968515742131"/>
+        </scene>
+        <!--Knockout Stages-->
+        <scene sceneID="Gn8-UK-7WP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZXS-xF-gBH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Knockout Stages" id="wcR-Sd-d1d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUs-Ba-63f">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.086730340860000005" blue="0.099786507489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9JE-Uf-TLz" kind="relationship" relationship="rootViewController" id="qX8-Ae-nM3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6a-lP-BZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="451.12443778110946"/>
         </scene>
     </scenes>
 </document>

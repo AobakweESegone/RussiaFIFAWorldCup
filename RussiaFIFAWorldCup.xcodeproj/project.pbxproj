@@ -15,7 +15,6 @@
 		E27F899020FA42BA0046C717 /* AESGroupDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27F898E20FA42BA0046C717 /* AESGroupDetailTableViewCell.xib */; };
 		E296FF9B20FA64F200A0878D /* cell_image_selected_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */; };
 		E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */; };
-		E296FFA320FAA00F00A0878D /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = E296FFA220FAA00F00A0878D /* trophy.png */; };
 		E29E589220F5C1970031DA33 /* AESStadium.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589120F5C1970031DA33 /* AESStadium.m */; };
 		E29E589520F5C55D0031DA33 /* AESParticipatingTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589420F5C55D0031DA33 /* AESParticipatingTeam.m */; };
 		E29E589B20F5C8070031DA33 /* AESGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589A20F5C8070031DA33 /* AESGroup.m */; };
@@ -50,7 +49,6 @@
 		E27F898E20FA42BA0046C717 /* AESGroupDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AESGroupDetailTableViewCell.xib; sourceTree = "<group>"; };
 		E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_image_selected_blue.png; sourceTree = "<group>"; };
 		E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groupDetailBackgroundImage.png; sourceTree = "<group>"; };
-		E296FFA220FAA00F00A0878D /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
 		E29E589020F5C1970031DA33 /* AESStadium.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESStadium.h; sourceTree = "<group>"; };
 		E29E589120F5C1970031DA33 /* AESStadium.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESStadium.m; sourceTree = "<group>"; };
 		E29E589320F5C55D0031DA33 /* AESParticipatingTeam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESParticipatingTeam.h; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		E2D7044120F7D6F10096DA4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E296FFA220FAA00F00A0878D /* trophy.png */,
 				E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */,
 				E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */,
 			);
@@ -263,7 +260,6 @@
 				E2B54B9921122BDD003FC9FB /* AESKnockoutDetailViewController.xib in Resources */,
 				E27F898920FA36B20046C717 /* AESGroupDetailViewController.xib in Resources */,
 				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
-				E296FFA320FAA00F00A0878D /* trophy.png in Resources */,
 				E23B3100210DD93200FBE36E /* AESKnockoutTableViewCell.xib in Resources */,
 				E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */,
 				E2B54B9E211233FF003FC9FB /* AESKnockoutDetailTableViewCell.xib in Resources */,

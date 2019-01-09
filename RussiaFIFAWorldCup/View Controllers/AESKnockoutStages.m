@@ -35,6 +35,17 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+//- (void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//    
+//    // resize the table view to fit its content... run the code in the main thread since this alters the UI
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        CGRect frame = self.tableView.frame;
+//        frame.size.height = self.tableView.contentSize.height;
+//        self.tableView.frame = frame;
+//    });
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,7 +76,9 @@
     AESKnockoutDetailViewController *groupDetail = [[AESKnockoutDetailViewController alloc] initWithNibName:@"AESKnockoutDetailViewController" bundle:nil];
     groupDetail.group = group;
     
-    [self presentViewController:groupDetail animated:YES completion:nil];
+    [self.navigationController pushViewController:groupDetail animated:YES];
+    
+    //[self presentViewController:groupDetail animated:YES completion:nil];
 }
 
 /*

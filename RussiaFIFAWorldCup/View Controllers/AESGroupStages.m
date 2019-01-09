@@ -41,6 +41,7 @@
     
     //COMMEMNT OUT FOR NETWORK CALL
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"No World Cup Data" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"No Local Data" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"Tournament Groups Generated" object:nil];
     
@@ -62,13 +63,28 @@
 
 - (void)receiveNotification:(NSNotification *)notification{
     if ([notification.name isEqualToString:@"No World Cup Data"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No World Cup Data" message:@"Encounted problem retrieving the world cup data. Please try again later." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connectivity is needed for full functionality." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Check Local Data" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self->sharedStore fetchLocalWorldCupData];
+        }];
         [alert addAction:action];
         
         // present the controller
         [self presentViewController:alert animated:YES completion:nil];
-    }else if ([notification.name isEqualToString:@"Tournament Groups Generated"]){
+    } else if ([notification.name isEqualToString:@"No Local Data"]) {
+        // to do ... check notes!!!
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"No internet conenction... check notes for todo implementation." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self->sharedStore fetchLocalWorldCupData];
+        }];
+        [alert addAction:action];
+        
+        // present the controller
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }
+    else if ([notification.name isEqualToString:@"Tournament Groups Generated"]){
         // reload the table view
         [self.tableView reloadData];
     }
@@ -185,7 +201,9 @@
     AESGroupDetailViewController *groupDetail = [[AESGroupDetailViewController alloc] initWithNibName:@"AESGroupDetailViewController" bundle:nil];
     groupDetail.group = group;
     
-    [self presentViewController:groupDetail animated:YES completion:nil];
+    [self.navigationController pushViewController:groupDetail animated:YES];
+    
+    //[self presentViewController:groupDetail animated:YES completion:nil];
 }
 
 /*
