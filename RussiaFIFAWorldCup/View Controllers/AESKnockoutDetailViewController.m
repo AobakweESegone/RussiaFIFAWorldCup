@@ -139,7 +139,7 @@
             }
             cell.matchNumber.text = [NSString stringWithFormat:@"%@", singleMatch.matchName];
             cell.matchDate.text = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
-            [cell.stadiumUsed setTitle:stadium.stadiumName forState:UIControlStateNormal];
+            cell.stadiumUsed.text = [NSString stringWithFormat:@"%@", stadium.stadiumName];
         }
     }
     

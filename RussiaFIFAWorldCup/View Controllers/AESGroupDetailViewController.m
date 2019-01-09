@@ -138,7 +138,7 @@
             cell.matchNumber.text = [NSString stringWithFormat:@"%@", singleMatch.matchName];
             cell.matchDay.text = [NSString stringWithFormat:@"%d", singleMatch.matchDay];
             cell.matchDate.text = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
-            [cell.stadiumUsed setTitle:stadium.stadiumName forState:UIControlStateNormal];
+            cell.stadiumUsed.text = [NSString stringWithFormat:@"%@", stadium.stadiumName];
         }
         
         

@@ -379,7 +379,7 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     }
     
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"teamGD" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"teamPts" ascending:NO];
     NSArray *descriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     NSArray *sortedTeamStats = [teamStats sortedArrayUsingDescriptors:descriptors];
     

@@ -39,7 +39,6 @@
     UINib *nib = [UINib nibWithNibName:@"AESGroupsTableViewCell" bundle:nil]; // nil forces the compiler to look in the main bundle
     [self.tableView registerNib:nib forCellReuseIdentifier:@"AESGroupsTableViewCell"];
     
-    //COMMEMNT OUT FOR NETWORK CALL
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"No World Cup Data" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"No Local Data" object:nil];
     

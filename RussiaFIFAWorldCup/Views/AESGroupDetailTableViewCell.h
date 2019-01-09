@@ -19,6 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *matchDay;
 @property (weak, nonatomic) IBOutlet UILabel *matchDate;
 @property (weak, nonatomic) IBOutlet UILabel *matchPlayTime;
-@property (weak, nonatomic) IBOutlet UIButton *stadiumUsed;
+@property (weak, nonatomic) IBOutlet UILabel *stadiumUsed;
 
 @end
