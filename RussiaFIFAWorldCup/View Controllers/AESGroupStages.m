@@ -62,7 +62,7 @@
 
 - (void)receiveNotification:(NSNotification *)notification{
     if ([notification.name isEqualToString:@"No World Cup Data"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connectivity is needed for full functionality." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connectivity is offline, or file is unavailable." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"Check Local Data" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self->sharedStore fetchLocalWorldCupData];
         }];
@@ -71,11 +71,11 @@
         // present the controller
         [self presentViewController:alert animated:YES completion:nil];
     } else if ([notification.name isEqualToString:@"No Local Data"]) {
-        // to do ... check notes!!!
+        // to do ... show message from bottom of screen!!!
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"No internet conenction... check notes for todo implementation." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self->sharedStore fetchLocalWorldCupData];
+            //[self->sharedStore fetchLocalWorldCupData];
         }];
         [alert addAction:action];
         
