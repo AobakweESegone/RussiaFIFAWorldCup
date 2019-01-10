@@ -433,60 +433,22 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     return matchesPerGroup;
 }
 
-- (NSDate *)dateFromStringUTC:(NSString *)dateString
-{
-    if ([dateString isEqual:[NSNull null]]){
-        dateString = @"";
-    }
-    NSString *dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
-    
-    NSTimeZone *inputTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-    NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
-    [inputDateFormatter setTimeZone:inputTimeZone];
-    [inputDateFormatter setDateFormat:dateFormat];
-    
-    NSDate *date = [inputDateFormatter dateFromString:dateString];
+- (NSString *)dateFromString:(NSString *)dateString {
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+        NSDate *dateFromString = [dateFormatter dateFromString:dateString];
     
     NSDateFormatter *outputDateFormatter = [[NSDateFormatter alloc] init];
     [outputDateFormatter setTimeZone:[NSTimeZone localTimeZone]];
     [outputDateFormatter setDateStyle:NSDateFormatterFullStyle];
-    [outputDateFormatter setTimeStyle:NSDateFormatterFullStyle];
-    NSString *localDateString = [outputDateFormatter stringFromDate:date];
+    [outputDateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    NSString *localDateString = [outputDateFormatter stringFromDate:dateFromString];
     
-    return [outputDateFormatter dateFromString:localDateString];
-}
-
-- (NSString *)stringFromDateUTC:(NSDate *)date
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
-    //[dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]]; // Prevent adjustment to user's local time zone.
-    return [dateFormatter stringFromDate:date];
-}
-
-- (NSString *)stringFromDate:(NSDate *)date
-{
-    NSDateFormatter *rfc3339DateFormatter = [[NSDateFormatter alloc] init];
-    [rfc3339DateFormatter setDateFormat:@"dd MMM y HH:mm:ss"];
-    [rfc3339DateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    return [rfc3339DateFormatter stringFromDate:date];
-}
-
-- (NSString *)stringFromDateTime:(NSDate *)date
-{
-    NSDateFormatter *rfc3339DateFormatter = [[NSDateFormatter alloc] init];
-    [rfc3339DateFormatter setDateFormat:@"dd MMM y"];
-    [rfc3339DateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    return [rfc3339DateFormatter stringFromDate:date];
-}
-
-- (NSString *)stringFullFromDate:(NSDate *)date
-{
-    NSDateFormatter *rfc3339DateFormatter = [[NSDateFormatter alloc] init];
-    [rfc3339DateFormatter setDateFormat:@"dd MMMM y"];
-    [rfc3339DateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    return [rfc3339DateFormatter stringFromDate:date];
+    NSLog(@"date is: %@", localDateString);
+    
+    return localDateString;
+    
 }
 
 @end

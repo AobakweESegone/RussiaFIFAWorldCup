@@ -138,7 +138,11 @@
                 }
             }
             cell.matchNumber.text = [NSString stringWithFormat:@"%@", singleMatch.matchName];
-            cell.matchDate.text = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
+            
+            NSString *matchDate = [NSString stringWithFormat:@"%@", singleMatch.matchDate];
+            NSString * dt = [sharedStore dateFromString:matchDate];
+            
+            cell.matchDate.text = [NSString stringWithFormat:@"%@", dt];
             cell.stadiumUsed.text = [NSString stringWithFormat:@"%@", stadium.stadiumName];
         }
     }
