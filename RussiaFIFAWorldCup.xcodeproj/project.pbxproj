@@ -21,6 +21,12 @@
 		E29E589E20F5C98B0031DA33 /* AESGroupMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E589D20F5C98A0031DA33 /* AESGroupMatch.m */; };
 		E29E58A420F5CE360031DA33 /* AESKnockOut.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A320F5CE360031DA33 /* AESKnockOut.m */; };
 		E29E58A720F5CF480031DA33 /* AESKnockoutMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */; };
+		E2A24D4A21E7581F00D11289 /* gs@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D4621E7581F00D11289 /* gs@1x.png */; };
+		E2A24D4B21E7581F00D11289 /* gs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D4721E7581F00D11289 /* gs@2x.png */; };
+		E2A24D4C21E7581F00D11289 /* gs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D4821E7581F00D11289 /* gs@3x.png */; };
+		E2A24D5321E7583200D11289 /* ko@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D4F21E7583200D11289 /* ko@1x.png */; };
+		E2A24D5421E7583200D11289 /* ko@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D5021E7583200D11289 /* ko@2x.png */; };
+		E2A24D5521E7583200D11289 /* ko@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A24D5121E7583200D11289 /* ko@3x.png */; };
 		E2B54B94211133F3003FC9FB /* AESKnockoutStages.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B54B93211133F3003FC9FB /* AESKnockoutStages.m */; };
 		E2B54B9821122BDD003FC9FB /* AESKnockoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B54B9621122BDD003FC9FB /* AESKnockoutDetailViewController.m */; };
 		E2B54B9921122BDD003FC9FB /* AESKnockoutDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B54B9721122BDD003FC9FB /* AESKnockoutDetailViewController.xib */; };
@@ -61,6 +67,12 @@
 		E29E58A320F5CE360031DA33 /* AESKnockOut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockOut.m; sourceTree = "<group>"; };
 		E29E58A520F5CF480031DA33 /* AESKnockoutMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutMatch.h; sourceTree = "<group>"; };
 		E29E58A620F5CF480031DA33 /* AESKnockoutMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockoutMatch.m; sourceTree = "<group>"; };
+		E2A24D4621E7581F00D11289 /* gs@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gs@1x.png"; sourceTree = "<group>"; };
+		E2A24D4721E7581F00D11289 /* gs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gs@2x.png"; sourceTree = "<group>"; };
+		E2A24D4821E7581F00D11289 /* gs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gs@3x.png"; sourceTree = "<group>"; };
+		E2A24D4F21E7583200D11289 /* ko@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ko@1x.png"; sourceTree = "<group>"; };
+		E2A24D5021E7583200D11289 /* ko@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ko@2x.png"; sourceTree = "<group>"; };
+		E2A24D5121E7583200D11289 /* ko@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ko@3x.png"; sourceTree = "<group>"; };
 		E2B54B92211133F3003FC9FB /* AESKnockoutStages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutStages.h; sourceTree = "<group>"; };
 		E2B54B93211133F3003FC9FB /* AESKnockoutStages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESKnockoutStages.m; sourceTree = "<group>"; };
 		E2B54B9521122BDD003FC9FB /* AESKnockoutDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESKnockoutDetailViewController.h; sourceTree = "<group>"; };
@@ -97,6 +109,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2A24D4421E7581F00D11289 /* gs.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				E2A24D4621E7581F00D11289 /* gs@1x.png */,
+				E2A24D4721E7581F00D11289 /* gs@2x.png */,
+				E2A24D4821E7581F00D11289 /* gs@3x.png */,
+			);
+			path = gs.imageset;
+			sourceTree = "<group>";
+		};
+		E2A24D4D21E7583200D11289 /* ko.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				E2A24D4F21E7583200D11289 /* ko@1x.png */,
+				E2A24D5021E7583200D11289 /* ko@2x.png */,
+				E2A24D5121E7583200D11289 /* ko@3x.png */,
+			);
+			path = ko.imageset;
+			sourceTree = "<group>";
+		};
 		E2B5DBC620F694EE002C9924 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +151,8 @@
 		E2D7044120F7D6F10096DA4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2A24D4D21E7583200D11289 /* ko.imageset */,
+				E2A24D4421E7581F00D11289 /* gs.imageset */,
 				E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */,
 				E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */,
 			);
@@ -255,16 +289,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A24D5321E7583200D11289 /* ko@1x.png in Resources */,
 				E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */,
 				E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */,
 				E2B54B9921122BDD003FC9FB /* AESKnockoutDetailViewController.xib in Resources */,
+				E2A24D5421E7583200D11289 /* ko@2x.png in Resources */,
 				E27F898920FA36B20046C717 /* AESGroupDetailViewController.xib in Resources */,
+				E2A24D5521E7583200D11289 /* ko@3x.png in Resources */,
+				E2A24D4B21E7581F00D11289 /* gs@2x.png in Resources */,
 				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
 				E23B3100210DD93200FBE36E /* AESKnockoutTableViewCell.xib in Resources */,
+				E2A24D4A21E7581F00D11289 /* gs@1x.png in Resources */,
 				E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */,
 				E2B54B9E211233FF003FC9FB /* AESKnockoutDetailTableViewCell.xib in Resources */,
 				E296FF9B20FA64F200A0878D /* cell_image_selected_blue.png in Resources */,
 				E27F899020FA42BA0046C717 /* AESGroupDetailTableViewCell.xib in Resources */,
+				E2A24D4C21E7581F00D11289 /* gs@3x.png in Resources */,
 				E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -91,7 +91,7 @@
         <scene sceneID="t44-mH-LSX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vVD-PB-E4g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Group Stages" id="b80-5Z-ywB"/>
+                    <tabBarItem key="tabBarItem" title="Group Stages" image="gs.png" id="b80-5Z-ywB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SpJ-47-hFL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -111,7 +111,7 @@
         <scene sceneID="Gn8-UK-7WP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZXS-xF-gBH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Knockout Stages" id="wcR-Sd-d1d"/>
+                    <tabBarItem key="tabBarItem" title="Knockout Stages" image="ko.png" id="wcR-Sd-d1d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EUs-Ba-63f">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -128,4 +128,8 @@
             <point key="canvasLocation" x="940" y="451.12443778110946"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gs.png" width="25" height="25"/>
+        <image name="ko.png" width="25" height="25"/>
+    </resources>
 </document>
