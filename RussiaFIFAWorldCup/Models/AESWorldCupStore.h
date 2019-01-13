@@ -42,7 +42,6 @@
 - (NSArray *)fetchGroupMatchesInGroup:(AESGroup *)group;
 - (NSArray *)fetchGroupMatchesInKnockoutGroup:(AESKnockOut *)group;
 
-- (NSDate *)dateFromStringUTC:(NSString *)dateString;
 - (NSString *)dateFromString:(NSString *)dateString;
 
 @end

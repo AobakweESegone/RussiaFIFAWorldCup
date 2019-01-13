@@ -96,6 +96,8 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         if (!data) {
             // notify interested observers
             [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
+            
+            return;
         }
 
         // write to file
@@ -147,6 +149,9 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
         
         // create tournament groups
         [self generateTournamentGroups];
+        
+        // notify observers that tournament groups have been generated
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Tournament Groups Generated" object:nil userInfo:nil];
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"No Local Data" object:nil];
     }

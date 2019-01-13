@@ -33,6 +33,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Group Stages" id="aX2-bx-sNu"/>
+                    <connections>
+                        <outlet property="groupStagesTableView" destination="bTU-Kk-E75" id="5Kd-t3-vCc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vck-sh-OJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

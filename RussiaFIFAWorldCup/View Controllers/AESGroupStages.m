@@ -18,6 +18,9 @@
 
 @implementation AESGroupStages{
     AESWorldCupStore *sharedStore;
+    
+    IBOutlet UITableView *groupStagesTableView;
+    
 }
 
 #pragma mark - initializers
@@ -62,8 +65,8 @@
 
 - (void)receiveNotification:(NSNotification *)notification{
     if ([notification.name isEqualToString:@"No World Cup Data"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connectivity is offline, or file is unavailable." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Check Local Data" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connection is offline, or remote file is temporarily unavailable.\nRetrieving local file from your last successful download." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self->sharedStore fetchLocalWorldCupData];
         }];
         [alert addAction:action];
