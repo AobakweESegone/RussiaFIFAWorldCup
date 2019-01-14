@@ -64,8 +64,8 @@
 
 
 - (void)receiveNotification:(NSNotification *)notification{
-    if ([notification.name isEqualToString:@"No World Cup Data"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connection is offline, or remote file is temporarily unavailable.\nRetrieving local file from your last successful download." preferredStyle:UIAlertControllerStyleAlert];
+    
+    if ([notification.name isEqualToString:@"No World Cup Data"]) {UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connection is offline, or remote file is temporarily unavailable.\nLoading local data from last successful download" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self->sharedStore fetchLocalWorldCupData];
         }];
@@ -74,9 +74,7 @@
         // present the controller
         [self presentViewController:alert animated:YES completion:nil];
     } else if ([notification.name isEqualToString:@"No Local Data"]) {
-        // to do ... show message from bottom of screen!!!
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"No internet conenction... check notes for todo implementation." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"No local data found.\nYou need internet connection to use the app." preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //[self->sharedStore fetchLocalWorldCupData];
         }];

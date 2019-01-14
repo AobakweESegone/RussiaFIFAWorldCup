@@ -34,6 +34,14 @@
 		E2B54B9E211233FF003FC9FB /* AESKnockoutDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B54B9C211233FF003FC9FB /* AESKnockoutDetailTableViewCell.xib */; };
 		E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */; };
 		E2B5DBD020F6963E002C9924 /* AESGroupsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */; };
+		E2E857FF21EC6EA200A6D994 /* iPhone-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857F721EC6EA200A6D994 /* iPhone-568h@2x.png */; };
+		E2E8580021EC6EA200A6D994 /* iPhone-568h_v7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857F821EC6EA200A6D994 /* iPhone-568h_v7@2x.png */; };
+		E2E8580121EC6EA200A6D994 /* iPhone-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857F921EC6EA200A6D994 /* iPhone-667h@2x.png */; };
+		E2E8580221EC6EA200A6D994 /* iPhone-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857FA21EC6EA200A6D994 /* iPhone-736h@3x.png */; };
+		E2E8580321EC6EA200A6D994 /* iPhone-Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857FB21EC6EA200A6D994 /* iPhone-Default.png */; };
+		E2E8580421EC6EA200A6D994 /* iPhone-Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857FC21EC6EA200A6D994 /* iPhone-Default@2x.png */; };
+		E2E8580521EC6EA200A6D994 /* iPhone-Default_v7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857FD21EC6EA200A6D994 /* iPhone-Default_v7@2x.png */; };
+		E2E8580621EC6EA200A6D994 /* iPhone-Portrait-2436h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2E857FE21EC6EA200A6D994 /* iPhone-Portrait-2436h@3x.png */; };
 		E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADC20F3DA790087BA04 /* Assets.xcassets */; };
 		E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFFADE20F3DA790087BA04 /* LaunchScreen.storyboard */; };
 		E2FFFAE320F3DA790087BA04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFAE220F3DA790087BA04 /* main.m */; };
@@ -84,6 +92,14 @@
 		E2B5DBCC20F6963D002C9924 /* AESGroupsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AESGroupsTableViewCell.xib; sourceTree = "<group>"; };
 		E2B5DBCD20F6963D002C9924 /* AESGroupsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESGroupsTableViewCell.m; sourceTree = "<group>"; };
 		E2B5DBCE20F6963E002C9924 /* AESGroupsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESGroupsTableViewCell.h; sourceTree = "<group>"; };
+		E2E857F721EC6EA200A6D994 /* iPhone-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-568h@2x.png"; sourceTree = "<group>"; };
+		E2E857F821EC6EA200A6D994 /* iPhone-568h_v7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-568h_v7@2x.png"; sourceTree = "<group>"; };
+		E2E857F921EC6EA200A6D994 /* iPhone-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-667h@2x.png"; sourceTree = "<group>"; };
+		E2E857FA21EC6EA200A6D994 /* iPhone-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-736h@3x.png"; sourceTree = "<group>"; };
+		E2E857FB21EC6EA200A6D994 /* iPhone-Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-Default.png"; sourceTree = "<group>"; };
+		E2E857FC21EC6EA200A6D994 /* iPhone-Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-Default@2x.png"; sourceTree = "<group>"; };
+		E2E857FD21EC6EA200A6D994 /* iPhone-Default_v7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-Default_v7@2x.png"; sourceTree = "<group>"; };
+		E2E857FE21EC6EA200A6D994 /* iPhone-Portrait-2436h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-Portrait-2436h@3x.png"; sourceTree = "<group>"; };
 		E2FFFAD020F3DA710087BA04 /* RussiaFIFAWorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussiaFIFAWorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFFADC20F3DA790087BA04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2FFFADF20F3DA790087BA04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,12 +167,28 @@
 		E2D7044120F7D6F10096DA4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2E857F621EC6EA200A6D994 /* launchImage.launchimage */,
 				E2A24D4D21E7583200D11289 /* ko.imageset */,
 				E2A24D4421E7581F00D11289 /* gs.imageset */,
 				E296FF9E20FA681E00A0878D /* groupDetailBackgroundImage.png */,
 				E296FF9A20FA64F200A0878D /* cell_image_selected_blue.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2E857F621EC6EA200A6D994 /* launchImage.launchimage */ = {
+			isa = PBXGroup;
+			children = (
+				E2E857F721EC6EA200A6D994 /* iPhone-568h@2x.png */,
+				E2E857F821EC6EA200A6D994 /* iPhone-568h_v7@2x.png */,
+				E2E857F921EC6EA200A6D994 /* iPhone-667h@2x.png */,
+				E2E857FA21EC6EA200A6D994 /* iPhone-736h@3x.png */,
+				E2E857FB21EC6EA200A6D994 /* iPhone-Default.png */,
+				E2E857FC21EC6EA200A6D994 /* iPhone-Default@2x.png */,
+				E2E857FD21EC6EA200A6D994 /* iPhone-Default_v7@2x.png */,
+				E2E857FE21EC6EA200A6D994 /* iPhone-Portrait-2436h@3x.png */,
+			);
+			path = launchImage.launchimage;
 			sourceTree = "<group>";
 		};
 		E2FFFAC720F3DA700087BA04 = {
@@ -289,20 +321,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8580321EC6EA200A6D994 /* iPhone-Default.png in Resources */,
 				E2A24D5321E7583200D11289 /* ko@1x.png in Resources */,
 				E2FFFAE020F3DA790087BA04 /* LaunchScreen.storyboard in Resources */,
 				E2FFFAF120F3DBE30087BA04 /* AESStoryBoard.storyboard in Resources */,
 				E2B54B9921122BDD003FC9FB /* AESKnockoutDetailViewController.xib in Resources */,
 				E2A24D5421E7583200D11289 /* ko@2x.png in Resources */,
+				E2E8580521EC6EA200A6D994 /* iPhone-Default_v7@2x.png in Resources */,
 				E27F898920FA36B20046C717 /* AESGroupDetailViewController.xib in Resources */,
+				E2E8580021EC6EA200A6D994 /* iPhone-568h_v7@2x.png in Resources */,
 				E2A24D5521E7583200D11289 /* ko@3x.png in Resources */,
 				E2A24D4B21E7581F00D11289 /* gs@2x.png in Resources */,
+				E2E857FF21EC6EA200A6D994 /* iPhone-568h@2x.png in Resources */,
+				E2E8580121EC6EA200A6D994 /* iPhone-667h@2x.png in Resources */,
 				E2B5DBCF20F6963E002C9924 /* AESGroupsTableViewCell.xib in Resources */,
+				E2E8580621EC6EA200A6D994 /* iPhone-Portrait-2436h@3x.png in Resources */,
 				E23B3100210DD93200FBE36E /* AESKnockoutTableViewCell.xib in Resources */,
+				E2E8580421EC6EA200A6D994 /* iPhone-Default@2x.png in Resources */,
 				E2A24D4A21E7581F00D11289 /* gs@1x.png in Resources */,
 				E296FF9F20FA681E00A0878D /* groupDetailBackgroundImage.png in Resources */,
 				E2B54B9E211233FF003FC9FB /* AESKnockoutDetailTableViewCell.xib in Resources */,
 				E296FF9B20FA64F200A0878D /* cell_image_selected_blue.png in Resources */,
+				E2E8580221EC6EA200A6D994 /* iPhone-736h@3x.png in Resources */,
 				E27F899020FA42BA0046C717 /* AESGroupDetailTableViewCell.xib in Resources */,
 				E2A24D4C21E7581F00D11289 /* gs@3x.png in Resources */,
 				E2FFFADD20F3DA790087BA04 /* Assets.xcassets in Resources */,
@@ -464,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 958MSQTU32;
@@ -475,6 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aobakwesegone.RussiaFIFAWorldCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -484,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 958MSQTU32;
@@ -495,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.aobakwesegone.RussiaFIFAWorldCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
