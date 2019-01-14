@@ -20,6 +20,7 @@
     AESWorldCupStore *sharedStore;
     
     IBOutlet UITableView *groupStagesTableView;
+    UIRefreshControl *refreshCntrl;
     
 }
 
@@ -47,6 +48,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"Tournament Groups Generated" object:nil];
     
+    refreshCntrl = [[UIRefreshControl alloc] init];
+    [refreshCntrl setTintColor:UIColor.whiteColor];
+    [refreshCntrl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Pull to refresh"]];
+    [refreshCntrl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
+    self.tableView.refreshControl = refreshCntrl;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -61,7 +68,17 @@
 
 #pragma mark - actions
 
-
+- (void) fetchData {
+    [sharedStore fetchWorldCupData];
+    
+    // delay the refresh control for 10 seconds
+    dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 1000 * NSEC_PER_SEC);
+    dispatch_after(deadLine, dispatch_get_main_queue(), ^(void){
+        [self->refreshCntrl endRefreshing];
+    });
+    
+    [refreshCntrl endRefreshing];
+}
 
 - (void)receiveNotification:(NSNotification *)notification{
     
