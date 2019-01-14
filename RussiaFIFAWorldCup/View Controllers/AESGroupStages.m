@@ -21,6 +21,9 @@
     
     IBOutlet UITableView *groupStagesTableView;
     UIRefreshControl *refreshCntrl;
+    UIView *loadingView;
+    UIActivityIndicatorView *activityIndicator;
+    UILabel *errorMessage;
     
 }
 
@@ -50,9 +53,24 @@
     
     refreshCntrl = [[UIRefreshControl alloc] init];
     [refreshCntrl setTintColor:UIColor.whiteColor];
-    [refreshCntrl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Pull to refresh"]];
+    [refreshCntrl setAttributedTitle:[[NSAttributedString alloc] initWithString:@"Refreshing"]];
     [refreshCntrl addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventValueChanged];
     self.tableView.refreshControl = refreshCntrl;
+    
+    loadingView = [[UIView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width / 2) - 40, 100, 80, 80)];
+    //[loadingView setCenter:self.view.center];
+    [loadingView setBackgroundColor:UIColor.blueColor];
+    [loadingView setClipsToBounds:YES];
+    [loadingView.layer setCornerRadius:10];
+    
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0, 0.0, 40.0, 40.0)];
+    [activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activityIndicator setHidesWhenStopped:YES];
+    [activityIndicator setCenter:CGPointMake(loadingView.frame.size.width / 2, loadingView.frame.size.height / 2)];
+    [loadingView addSubview:activityIndicator];
+    [self.view addSubview:loadingView];
+    
+    [activityIndicator startAnimating];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -69,20 +87,45 @@
 #pragma mark - actions
 
 - (void) fetchData {
+    
+    // lock interface
+    [UIApplication.sharedApplication beginIgnoringInteractionEvents];
+    
+    if (sharedStore.fetchTournmentGroups.count != 0) {
+        
+        // delay the refresh control for 5 seconds
+        dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC);
+        dispatch_after(deadLine, dispatch_get_main_queue(), ^(void){
+            [self->refreshCntrl endRefreshing];
+        });
+        
+        [UIApplication.sharedApplication endIgnoringInteractionEvents];
+        
+        return;
+    }
+    
+    [errorMessage removeFromSuperview];
+    
     [sharedStore fetchWorldCupData];
     
-    // delay the refresh control for 10 seconds
-    dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 1000 * NSEC_PER_SEC);
+    // delay the refresh control for 5 seconds
+    dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC);
     dispatch_after(deadLine, dispatch_get_main_queue(), ^(void){
         [self->refreshCntrl endRefreshing];
     });
     
-    [refreshCntrl endRefreshing];
+    [UIApplication.sharedApplication endIgnoringInteractionEvents];
 }
 
 - (void)receiveNotification:(NSNotification *)notification{
     
-    if ([notification.name isEqualToString:@"No World Cup Data"]) {UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connection is offline, or remote file is temporarily unavailable.\nLoading local data from last successful download" preferredStyle:UIAlertControllerStyleAlert];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self->loadingView removeFromSuperview];
+    });
+    
+    if ([notification.name isEqualToString:@"No World Cup Data"]) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"Internet connection is unavailable, or remote file is temporarily unavailable.\nLoading local data from your last successful download" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self->sharedStore fetchLocalWorldCupData];
         }];
@@ -91,14 +134,15 @@
         // present the controller
         [self presentViewController:alert animated:YES completion:nil];
     } else if ([notification.name isEqualToString:@"No Local Data"]) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"RussiaFIFAWorldCup." message:@"No local data found.\nYou need internet connection to use the app." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //[self->sharedStore fetchLocalWorldCupData];
-        }];
-        [alert addAction:action];
         
-        // present the controller
-        [self presentViewController:alert animated:YES completion:nil];
+        errorMessage = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 100)];
+        [errorMessage setNumberOfLines:3];
+        [errorMessage setText:@"No local data found\nPull down to refresh\n"];
+        [errorMessage setTextColor:UIColor.whiteColor];
+        [errorMessage setTextAlignment:NSTextAlignmentCenter];
+        [errorMessage setFont:[UIFont boldSystemFontOfSize:25]];
+        [errorMessage setCenter:CGPointMake(self.view.bounds.size.width / 2, 50)];
+        [self.view addSubview:self->errorMessage];
         
     }
     else if ([notification.name isEqualToString:@"Tournament Groups Generated"]){
