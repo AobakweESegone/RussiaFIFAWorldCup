@@ -16,8 +16,6 @@
     AESWorldCupStore *sharedStore = [AESWorldCupStore sharedStore];
     [sharedStore fetchWorldCupData];
     
-    [NSThread sleepForTimeInterval:1];
-    
     return YES;
 }
 

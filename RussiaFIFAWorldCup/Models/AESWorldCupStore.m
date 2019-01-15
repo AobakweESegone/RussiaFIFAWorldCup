@@ -94,8 +94,11 @@ NSString * const HOST_URL = @"https://raw.githubusercontent.com/lsv/fifa-worldcu
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
         if (!data) {
-            // notify interested observers
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // notify interested observers
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"No World Cup Data" object:nil];
+            });
             
             return;
         }
