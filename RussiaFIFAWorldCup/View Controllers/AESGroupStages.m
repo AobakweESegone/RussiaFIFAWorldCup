@@ -97,9 +97,8 @@
         dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC);
         dispatch_after(deadLine, dispatch_get_main_queue(), ^(void){
             [self->refreshCntrl endRefreshing];
+            [UIApplication.sharedApplication endIgnoringInteractionEvents];
         });
-        
-        [UIApplication.sharedApplication endIgnoringInteractionEvents];
         
         return;
     }
@@ -112,9 +111,9 @@
     dispatch_time_t deadLine = dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC);
     dispatch_after(deadLine, dispatch_get_main_queue(), ^(void){
         [self->refreshCntrl endRefreshing];
+        [UIApplication.sharedApplication endIgnoringInteractionEvents];
     });
     
-    [UIApplication.sharedApplication endIgnoringInteractionEvents];
 }
 
 - (void)receiveNotification:(NSNotification *)notification{
